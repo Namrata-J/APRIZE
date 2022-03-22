@@ -1,0 +1,11 @@
+@import url(../../utils/base.css);
+
+.ap_home-page {
+    background-color: var(--most-lightest-gray);
+}
+
+.ap_header-section {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
