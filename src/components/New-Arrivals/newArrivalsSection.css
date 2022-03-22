@@ -1,0 +1,25 @@
+.ap_homepage-newArrivals-categories {
+    padding: 0rem 1rem;
+}
+
+.ap_new-arrival-img {
+    height: 12rem;
+    margin: 1rem;
+}
+
+.ap_new-arrival-img:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px var(--black);
+}
+
+.ap_newArrivals-scrollable-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+@media only screen and (max-width: 560px) {
+    .ap_new-arrival-img {
+        height: 10rem;
+    }
+}

@@ -1,0 +1,25 @@
+.ap_homePage-discountedProducts-categories {
+    padding: 0rem 1rem;
+}
+
+.ap_discountedProducts-scrollable-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.ap_discountedProduct-img {
+    height: 12rem;
+    margin: 0.3rem 1rem;
+}
+
+.ap_discountedProduct-img:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px var(--black);
+}
+
+@media only screen and (max-width: 560px) {
+    .ap_discountedProduct-img {
+        height: 10rem;
+    }
+}

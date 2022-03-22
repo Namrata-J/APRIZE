@@ -1,0 +1,22 @@
+.ap_homePage-filtered-categories {
+    padding: 4.5rem 1rem 1rem 1rem;
+}
+
+.ap_scrollable-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.ap_category-img {
+    clip-path: circle();
+    height: 4.5rem;
+    margin: 0rem 1rem;
+    width: 4.5rem;
+    z-index: 1;
+}
+
+.ap_category-img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}

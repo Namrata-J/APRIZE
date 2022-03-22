@@ -1,0 +1,25 @@
+.ap_homePage-productsOnSale-category {
+    padding: 0rem 1rem;
+}
+
+.ap_productsOnSale-section {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.ap_productOnSale-img {
+    height: 12rem;
+    margin: 0.8rem 1rem;
+}
+
+.ap_productOnSale-img:hover {
+    box-shadow: 0px 0px 5px 2px var(--black);
+}
+
+@media only screen and (max-width: 560px) {
+    .ap_productOnSale-img {
+        height: 10rem;
+    }
+}
