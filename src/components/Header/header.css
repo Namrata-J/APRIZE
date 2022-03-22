@@ -1,0 +1,89 @@
+.ap_header{
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 5px var(--black);
+}
+
+.ap_header-content-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+
+.ap_logo {
+    text-decoration: none;
+}
+
+.ap_header-searchBar {
+    width: 100%;
+}
+
+.ap_header-iconsAndBtns {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.ap_header-icon {
+    color: var(--action);
+    font-size: 1.3rem;
+}
+
+.badge-on-btn {
+    display: inline-block;
+    margin: 0.7rem 0rem;
+}
+
+.badge-on-btn button {
+    background-color: var(--action);
+    color: var(--white-color);
+}
+
+.ap_popUp-container {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+}
+
+.ap_popUp-search-section {
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 2px var(--black);
+    width: 70%;
+    margin: auto;
+    padding: 2rem;
+    position: relative;
+}
+
+.ap_close-popUp {
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+}
+
+.ap_searchBar {
+    border: transparent;
+    box-shadow: 0px 0px 2px var(--action);
+    padding: 0.3rem 0.8rem;
+    width: 80%;
+    outline: none;
+}
+
+@media only screen and (max-width: 460px) {
+    .ap_header-content-container {
+        width: 90%;
+    }
+
+    .ap_header-iconsAndBtns {
+        gap: 1rem;
+    }
+
+    .ap_popUp-search-section {
+        width: 90%;
+    }
+}
