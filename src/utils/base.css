@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --most-lightest-gray: rgb(241, 245, 245);
+}
