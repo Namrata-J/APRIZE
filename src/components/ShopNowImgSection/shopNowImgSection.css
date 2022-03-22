@@ -1,0 +1,81 @@
+.ap_home-page-shopNowImg {
+    width: 100%;
+    position: relative;
+}
+
+.ap_home-page-shopNowImg img{
+    width: 100%;
+}
+
+.ap_home-page-shopNowImg button {
+    color: var(--white-color);
+    font-size: larger;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.ap_home-page-shopNowImg p {
+    color: var(--action);
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
+@media only screen and (max-width: 1280px) {
+    .ap_home-page-shopNowImg p {
+        top: 63%;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .ap_home-page-shopNowImg p {
+        top: 65%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .ap_home-page-shopNowImg p {
+        top: 70%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .ap_home-page-shopNowImg button {
+        top: 47%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .ap_home-page-shopNowImg button {
+        top: 40%;
+    }
+
+    .ap_home-page-shopNowImg p {
+        top: 65%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .ap_home-page-shopNowImg button {
+        font-size: medium;
+        top: 33%;
+        left: 4%;
+    }
+
+    .ap_home-page-shopNowImg p {
+        left: 5%;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .ap_home-page-shopNowImg button {
+        top: 28%;
+        left: 3%;
+    }
+
+    .ap_home-page-shopNowImg p {
+        font-size: smaller;
+    }
+}
