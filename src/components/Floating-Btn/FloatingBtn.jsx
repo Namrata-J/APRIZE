@@ -1,22 +1,15 @@
 import { useState } from "react";
 import "./floatingBtn.css";
-import { FaBars, FaChevronUp } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { FilterableForm } from "../Filterable-Form/FilterableForm";
 
 const FloatingBtn = () => {
 
-    // const [sidebarIcon, setSidebarIcon] = useState(<FaBars />);
     const [ hamburgerPopUpFilterDisplay, setHamburgerPopUpFilterDisplay] = useState("none");
 
     const getTheIcon = (hamburgerPopUpFilterDisplay) => {
-        // sidebarIcon.type.name === "FaBars" ? setSidebarIcon(<FaChevronUp />) : setSidebarIcon(<FaBars />)
-
         hamburgerPopUpFilterDisplay === "none" ? setHamburgerPopUpFilterDisplay("block") : setHamburgerPopUpFilterDisplay("none")
     }
-
-    // const getThePopUpFilterDisplay = () => {
-    //     popUpFilterDisplay
-    // } 
 
     return (
         <div>
