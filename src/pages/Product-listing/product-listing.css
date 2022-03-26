@@ -1,0 +1,12 @@
+@import url(../../utils/base.css);
+
+.ap_productListing-page {
+    background-color: var(--most-lightest-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+.ap_productListing-main-section {
+    display: flex;
+    width: 100%;
+}

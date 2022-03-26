@@ -1,0 +1,57 @@
+.ap_productListing-page-sideBar {
+    background-color: var(--white-color);
+    border: 1px solid var(--lightest-gray);
+    display: flex;
+    justify-content: flex-start;
+    padding: 4rem 1rem 1rem 1rem;
+    width: 230px;   
+    height: 40rem;
+    overflow-y: scroll;
+}
+
+.ap_filter-section h4 {
+    padding: 1.5rem 0rem 0.8rem 0rem;
+    text-align: left;
+}
+
+.ap_filter-section label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.3rem;
+}
+
+.ap_input-field {
+    width: 10px;
+}
+
+.ap_price-slider {
+    align-items: center;
+    display: flex;
+    font-size: 0.8rem;
+    flex-wrap: nowrap;
+    gap: 3px;
+}
+
+.ap_slider {
+    cursor: pointer;
+    width: 7rem;
+    height: 2px;
+}
+
+.ap_filter-clear {
+    text-align: left;
+}
+
+.ap_clear-all {
+    color: var(--white-color);
+    margin: 0;
+}
+
+@media only screen and (max-width: 772px) {
+    .ap_productListing-page-sideBar {
+        display: none;
+    }
+}
