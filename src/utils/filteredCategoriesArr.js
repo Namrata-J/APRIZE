@@ -61,7 +61,7 @@ const categoryTypeArr = [
         img: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/water-bottles-1613062033.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
     },
     {
-        category: "MamaEarth Products",
+        category: "Bodycare Products",
         img: "https://m.media-amazon.com/images/I/51H59tBryGL._SL1200_.jpg"
     },
     {
