@@ -24,7 +24,7 @@ const FloatingBtn = () => {
     return (
         <div>
             <button className="ap_hamburger et_icon-btn action-color btn b-rad4" onClick={() => getTheIcon(sidebarIcon)}>
-                <i className="fas fa-bars">{sidebarIcon}</i>
+                {sidebarIcon}
             </button>
             <div className="ap_hamburger-popUp-filters b-rad1" style={{ display: getThePopUpFilterDisplay(sidebarIcon) }}>
                 <FilterableForm />
