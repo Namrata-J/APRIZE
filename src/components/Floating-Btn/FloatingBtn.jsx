@@ -5,28 +5,25 @@ import { FilterableForm } from "../Filterable-Form/FilterableForm";
 
 const FloatingBtn = () => {
 
-    const [sidebarIcon, setSidebarIcon] = useState(<FaBars />);
+    // const [sidebarIcon, setSidebarIcon] = useState(<FaBars />);
+    const [ hamburgerPopUpFilterDisplay, setHamburgerPopUpFilterDisplay] = useState("none");
 
-    const getTheIcon = (sidebarIcon) => {
-        sidebarIcon.type.name === "FaBars" ? setSidebarIcon(<FaChevronUp />) : setSidebarIcon(<FaBars />)
-        console.log(sidebarIcon)
+    const getTheIcon = (hamburgerPopUpFilterDisplay) => {
+        // sidebarIcon.type.name === "FaBars" ? setSidebarIcon(<FaChevronUp />) : setSidebarIcon(<FaBars />)
+
+        hamburgerPopUpFilterDisplay === "none" ? setHamburgerPopUpFilterDisplay("block") : setHamburgerPopUpFilterDisplay("none")
     }
 
-    const getThePopUpFilterDisplay = (sidebarIcon) => {
-        if( sidebarIcon.type.name === "FaBars" ){
-            return "none"
-        }else if( sidebarIcon.type.name === "FaChevronUp" ){
-            return "block"
-        }
-    //    return sidebarIcon.type.name === "FaBars" ? "none" : "block"
-    } 
+    // const getThePopUpFilterDisplay = () => {
+    //     popUpFilterDisplay
+    // } 
 
     return (
         <div>
-            <button className="ap_hamburger et_icon-btn action-color btn b-rad4" onClick={() => getTheIcon(sidebarIcon)}>
-                {sidebarIcon}
+            <button className="ap_hamburger et_icon-btn action-color btn b-rad4" onClick={() => getTheIcon(hamburgerPopUpFilterDisplay)}>
+                <i className="fas fa-bars"><FaBars /></i>
             </button>
-            <div className="ap_hamburger-popUp-filters b-rad1" style={{ display: getThePopUpFilterDisplay(sidebarIcon) }}>
+            <div className="ap_hamburger-popUp-filters b-rad1" style={{ display: hamburgerPopUpFilterDisplay }}>
                 <FilterableForm />
             </div>
         </div>
