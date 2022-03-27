@@ -22,7 +22,7 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Men"],
+    isInSection: ["Women"],
     discount: "20",
     discountedPrice: 1000,
     rating: 3.5,
@@ -42,14 +42,14 @@ export const products = [
     isAddedToCart: false,
     isLiked: false,
     isInSection: ["Women"],
-    discount: "10",
+    discount: "65",
     discountedPrice: 900,
     rating: 3.7,
   },
   {
     _id: uuid(),
     brandName: "Fendi",
-    description: "Red leather bagpack",
+    description: "Brown leather bagpack",
     categoryName: "Bags",
     img: "https://images.unsplash.com/photo-1605733513597-a8f8341084e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=929&q=80",
     isNewArrival: false,
@@ -60,9 +60,9 @@ export const products = [
     isTrending: true,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Men", "Women"],
+    isInSection: ["Women"],
     discount: "40",
-    discountedPrice: 1500,
+    discountedPrice: 8556,
     rating: 4,
   },
   {
@@ -136,9 +136,9 @@ export const products = [
     isTrending: true,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Men", "Women"],
+    isInSection: ["Women"],
     discount: "",
-    discountedPrice: 500,
+    discountedPrice: 765,
     rating: 2.5,
   },
   {
@@ -195,7 +195,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women"],
     discount: "",
-    discountedPrice: 2000,
+    discountedPrice: 6547,
     rating: 4,
   },
   {
@@ -233,7 +233,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women"],
     discount: "50",
-    discountedPrice: 500,
+    discountedPrice: 986,
     rating: 4,
   },
   {
@@ -309,7 +309,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "95",
-    discountedPrice: 200,
+    discountedPrice: 6200,
     rating: 4.2,
   },
   {
@@ -328,13 +328,13 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women"],
     discount: "",
-    discountedPrice: 500,
+    discountedPrice: 1500,
     rating: 2.5,
   },
   {
     _id: uuid(),
     brandName: "Curology",
-    description: "Curology body spray",
+    description: "Curology lips moisturizer",
     categoryName: "Bodycare Products",
     img: "https://images.unsplash.com/photo-1556228852-80b6e5eeff06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
     isNewArrival: true,
@@ -345,9 +345,9 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Men", "Women"],
+    isInSection: ["Women"],
     discount: "",
-    discountedPrice: 559,
+    discountedPrice: 1559,
     rating: 3,
   },
   {
@@ -366,7 +366,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women"],
     discount: "10",
-    discountedPrice: 600,
+    discountedPrice: 1600,
     rating: 3.5,
   },
   {
@@ -404,7 +404,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Kids"],
     discount: "5",
-    discountedPrice: 499,
+    discountedPrice: 1499,
     rating: 3.1,
   },
   {
@@ -537,7 +537,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women"],
     discount: "90",
-    discountedPrice: 100,
+    discountedPrice: 1100,
     rating: 3.8,
   },
   {
@@ -575,7 +575,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "10",
-    discountedPrice: 1000,
+    discountedPrice: 8756,
     rating: 3,
   },
   {
@@ -613,7 +613,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "50",
-    discountedPrice: 1000,
+    discountedPrice: 1265,
     rating: 3,
   },
   {
@@ -632,7 +632,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "50",
-    discountedPrice: 50000,
+    discountedPrice: 100000,
     rating: 5,
   },
   {
@@ -651,7 +651,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "30",
-    discountedPrice: 30000,
+    discountedPrice: 60000,
     rating: 5,
   },
   {
@@ -670,7 +670,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 2000,
+    discountedPrice: 2400,
     rating: 3,
   },
   {
@@ -689,7 +689,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 2000,
+    discountedPrice: 2700,
     rating: 3,
   },
   {
@@ -746,7 +746,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "15",
-    discountedPrice: 1500,
+    discountedPrice: 875,
     rating: 4,
   },
   {
@@ -841,7 +841,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women", "Men"],
     discount: "20",
-    discountedPrice: 500,
+    discountedPrice: 1233,
     rating: 3,
   },
   {
@@ -860,7 +860,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women", "Men"],
     discount: "10",
-    discountedPrice: 500,
+    discountedPrice: 999,
     rating: 3.5,
   },
   {
@@ -879,7 +879,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women", "Men"],
     discount: "",
-    discountedPrice: 500,
+    discountedPrice: 876,
     rating: 3.8,
   },
   {
@@ -896,9 +896,9 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women", "Men"],
+    isInSection: ["Women"],
     discount: "",
-    discountedPrice: 1000,
+    discountedPrice: 5555,
     rating: 3.8,
   },
   {
@@ -915,9 +915,9 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women", "Men"],
+    isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 2000,
+    discountedPrice: 5569,
     rating: 3.5,
   },
   {
@@ -934,9 +934,9 @@ export const products = [
     isTrending: true,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women", "Men"],
+    isInSection: ["Women"],
     discount: "15",
-    discountedPrice: 3000,
+    discountedPrice: 10999,
     rating: 4,
   },
   {
@@ -953,9 +953,9 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women", "Men"],
+    isInSection: ["Women"],
     discount: "40",
-    discountedPrice: 1000,
+    discountedPrice: 879,
     rating: 4,
   },
   {
@@ -972,9 +972,9 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women", "Men"],
+    isInSection: ["Women"],
     discount: "40",
-    discountedPrice: 1000,
+    discountedPrice: 1599,
     rating: 4,
   },
   {
@@ -991,9 +991,9 @@ export const products = [
     isTrending: true,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women", "Men"],
+    isInSection: ["Women"],
     discount: "",
-    discountedPrice: 799,
+    discountedPrice: 1299,
     rating: 4.5,
   },
   {
@@ -1031,7 +1031,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women", "Men", "Kids"],
     discount: "10",
-    discountedPrice: 400,
+    discountedPrice: 399,
     rating: 2.5,
   },
   {
@@ -1050,7 +1050,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women", "Men", "Kids"],
     discount: "20",
-    discountedPrice: 40000,
+    discountedPrice: 55000,
     rating: 4,
   },
   {
@@ -1088,7 +1088,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women", "Men", "Kids"],
     discount: "5",
-    discountedPrice: 2000,
+    discountedPrice: 5500,
     rating: 4.5,
   },
   {
@@ -1145,7 +1145,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 2000,
+    discountedPrice: 1999,
     rating: 4.5,
   },
   {
@@ -1164,7 +1164,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 1500,
+    discountedPrice: 3409,
     rating: 4,
   },
   {
@@ -1183,7 +1183,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 1000,
+    discountedPrice: 2300,
     rating: 3.5,
   },
   {
@@ -1202,7 +1202,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 1000,
+    discountedPrice: 3476,
     rating: 3.5,
   },
   {
@@ -1221,7 +1221,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 1000,
+    discountedPrice: 5889,
     rating: 3.8,
   },
   {
@@ -1240,7 +1240,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "20",
-    discountedPrice: 1500,
+    discountedPrice: 4873,
     rating: 3.5,
   },
   {
@@ -1259,7 +1259,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "5",
-    discountedPrice: 1500,
+    discountedPrice: 8899,
     rating: 5,
   },
   {
@@ -1278,7 +1278,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Kids"],
     discount: "5",
-    discountedPrice: 1000,
+    discountedPrice: 1287,
     rating: 3.7,
   },
   {
@@ -1297,7 +1297,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Kids"],
     discount: "",
-    discountedPrice: 2000,
+    discountedPrice: 3999,
     rating: 4,
   },
   {
@@ -1316,7 +1316,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "",
-    discountedPrice: 2000,
+    discountedPrice: 6000,
     rating: 4,
   },
   {
@@ -1335,7 +1335,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "10",
-    discountedPrice: 1500,
+    discountedPrice: 3400,
     rating: 3.5,
   },
   {
@@ -1354,7 +1354,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "10",
-    discountedPrice: 1000,
+    discountedPrice: 2269,
     rating: 3.5,
   },
   {
@@ -1373,7 +1373,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 1200,
+    discountedPrice: 1279,
     rating: 3,
   },
   {
@@ -1392,7 +1392,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "20",
-    discountedPrice: 2000,
+    discountedPrice: 3498,
     rating: 4,
   },
   {
@@ -1430,7 +1430,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women"],
     discount: "20",
-    discountedPrice: 1000,
+    discountedPrice: 15999,
     rating: 3.5,
   },
   {
@@ -1449,7 +1449,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Kids"],
     discount: "20",
-    discountedPrice: 300,
+    discountedPrice: 549,
     rating: 3.5,
   },
   {
@@ -1468,7 +1468,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "20",
-    discountedPrice: 600,
+    discountedPrice: 345,
     rating: 3.5,
   },
   {
@@ -1487,7 +1487,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "",
-    discountedPrice: 500,
+    discountedPrice: 899,
     rating: 3,
   },
   {
@@ -1506,7 +1506,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "10",
-    discountedPrice: 800,
+    discountedPrice: 439,
     rating: 3,
   },
   {
@@ -1525,7 +1525,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "10",
-    discountedPrice: 1000,
+    discountedPrice: 987,
     rating: 4,
   },
   {
@@ -1544,7 +1544,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "30",
-    discountedPrice: 1000,
+    discountedPrice: 999,
     rating: 4.5,
   },
   {
@@ -1563,7 +1563,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men", "Women", "Kids"],
     discount: "10",
-    discountedPrice: 2000,
+    discountedPrice: 2799,
     rating: 4.5,
   },
   {
@@ -1582,7 +1582,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 700,
+    discountedPrice: 475,
     rating: 4.5,
   },
   {
@@ -1601,7 +1601,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 700,
+    discountedPrice: 599,
     rating: 4.5,
   },
   {
@@ -1620,7 +1620,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 1200,
+    discountedPrice: 799,
     rating: 4.5,
   },
   {
@@ -1639,7 +1639,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "10",
-    discountedPrice: 2000,
+    discountedPrice: 4500,
     rating: 4,
   },
   {
@@ -1658,7 +1658,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 1000,
+    discountedPrice: 2500,
     rating: 3.5,
   },
   {
@@ -1677,7 +1677,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Men"],
     discount: "",
-    discountedPrice: 2000,
+    discountedPrice: 1999,
     rating: 4,
   },
   {
@@ -1734,7 +1734,7 @@ export const products = [
     isLiked: false,
     isInSection: ["Women"],
     discount: "",
-    discountedPrice: 1000,
+    discountedPrice: 2200,
     rating: 3.5,
   },
   {
@@ -1751,9 +1751,9 @@ export const products = [
     isTrending: false,
     isAddedToCart: false,
     isLiked: false,
-    isInSection: ["Women"],
+    isInSection: ["Men"],
     discount: "",
-    discountedPrice: 1000,
+    discountedPrice: 1200,
     rating: 3.5,
   },
 ];
