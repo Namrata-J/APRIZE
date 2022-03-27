@@ -3,7 +3,97 @@ import "./filterableForm.css";
 
 const FilterableForm = () => {
 
-   const { dispatch } = useFilterData();
+    const { dispatch } = useFilterData();
+
+    const filterableFormSortByDiscountArr = [
+        {
+            inputId: "ap_sort-tenPercentAndAbove",
+            optionForSortByDiscount: "10% & above"
+        },
+        {
+            inputId: "ap_sort-thirtyPercentAndAbove",
+            optionForSortByDiscount: "30% & above"
+        },
+        {
+            inputId: "ap_sort-sixtyPercentAndAbove",
+            optionForSortByDiscount: "60% & above"
+        },
+        {
+            inputId: "ap_sort-eightyPercentAndAbove",
+            optionForSortByDiscount: "80% & above"
+        }
+    ];
+
+    const filterableFormCategoryArr = [
+        {
+            inputId: "ap_filter-bags",
+            categoryName: "Bags"
+        },
+        {
+            inputId: "ap_filter-bodycareProducts",
+            categoryName: "Bodycare Products"
+        },
+        {
+            inputId: "ap_filter-furniture",
+            categoryName: "Furniture"
+        },
+        {
+            inputId: "ap_filter-headphones",
+            categoryName: "Headphones"
+        },
+        {
+            inputId: "ap_filter-jewellery",
+            categoryName: "Jewellery"
+        },
+        {
+            inputId: "ap_filter-kitchenUtensils",
+            categoryName: "Kitchen utensils"
+        },
+        {
+            inputId: "ap_filter-makeUp",
+            categoryName: "Makeup"
+        },
+        {
+            inputId: "ap_filter-masks",
+            categoryName: "Masks"
+        },
+        {
+            inputId: "ap_filter-mobiles",
+            categoryName: "Mobiles"
+        },
+        {
+            inputId: "ap_filter-perfumes",
+            categoryName: "Perfumes"
+        },
+        {
+            inputId: "ap_filter-professionals",
+            categoryName: "Professionals"
+        },
+        {
+            inputId: "ap_filter-saree",
+            categoryName: "Saree"
+        },
+        {
+            inputId: "ap_filter-shoes",
+            categoryName: "Shoes"
+        },
+        {
+            inputId: "ap_filter-watches",
+            categoryName: "Watches"
+        },
+        {
+            inputId: "ap_filter-waterBottles",
+            categoryName: "Water Bottles"
+        },
+        {
+            inputId: "ap_filter-western",
+            categoryName: "Western"
+        },
+        {
+            inputId: "ap_filter-winter",
+            categoryName: "Winter"
+        }
+    ];
 
     return (
         <form className="ap_filter-section">
@@ -40,18 +130,16 @@ const FilterableForm = () => {
             <div className="ap_sort-by-discount">
                 <h4>Sort By Discount</h4>
 
-                <label htmlFor="ap_sort-tenPercentAndAbove">
-                    <input type="radio" id="ap_sort-tenPercentAndAbove" name="sortByDiscount" value="10% & above" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />10% & above
-                </label>
-                <label htmlFor="ap_sort-thirtyPercentAndAbove">
-                    <input type="radio" id="ap_sort-thirtyPercentAndAbove" name="sortByDiscount" value="30% & above" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />30% & above
-                </label>
-                <label htmlFor="ap_sort-sixtyPercentAndAbove">
-                    <input type="radio" id="ap_sort-sixtyPercentAndAbove" name="sortByDiscount" value="60% & above" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />60% & above
-                </label>
-                <label htmlFor="ap_sort-eightyPercentAndAbove">
-                    <input type="radio" id="ap_sort-eightyPercentAndAbove" name="sortByDiscount" value="80% & above" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />80% & above
-                </label>
+                {
+                    filterableFormSortByDiscountArr.map(discountSort => {
+                        return (
+                            <label htmlFor={ discountSort.inputId }>
+                                <input type="radio" id={ discountSort.inputId } name="sortByDiscount" value={ discountSort.optionForSortByDiscount } className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />{ discountSort.optionForSortByDiscount }
+                            </label>
+                        )
+                    })
+                }
+
             </div>
 
             <div className="ap_filter-price">
@@ -81,57 +169,16 @@ const FilterableForm = () => {
             <div className="ap_filter-category">
                 <h4>Category</h4>
 
-                <label htmlFor="ap_filter-bags">
-                    <input type="checkbox" id="ap_filter-bags" name="filterByCategory" value="Bags" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Bags
-                </label>
-                <label htmlFor="ap_filter-bodycareProducts">
-                    <input type="checkbox" id="ap_filter-bodycareProducts" name="filterByCategory" value="Bodycare Products" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Bodycare Products
-                </label>
-                <label htmlFor="ap_filter-furniture">
-                    <input type="checkbox" id="ap_filter-furniture" name="filterByCategory" value="Furniture" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Furniture
-                </label>
-                <label htmlFor="ap_filter-headphones">
-                    <input type="checkbox" id="ap_filter-headphones" name="filterByCategory" value="Headphones" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Headphones
-                </label>
-                <label htmlFor="ap_filter-jewellery">
-                    <input type="checkbox" id="ap_filter-jewellery" name="filterByCategory" value="Jewellery" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Jewellery
-                </label>
-                <label htmlFor="ap_filter-kitchenUtensils">
-                    <input type="checkbox" id="ap_filter-kitchenUtensils" name="filterByCategory" value="Kitchen utensils" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Kitchen utensils
-                </label>
-                <label htmlFor="ap_filter-makeUp">
-                    <input type="checkbox" id="ap_filter-makeUp" name="filterByCategory" value="Makeup" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Makeup
-                </label>
-                <label htmlFor="ap_filter-masks">
-                    <input type="checkbox" id="ap_filter-masks" name="filterByCategory" value="Masks" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Masks
-                </label>
-                <label htmlFor="ap_filter-mobiles">
-                    <input type="checkbox" id="ap_filter-mobiles" name="filterByCategory" value="Mobiles" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Mobiles
-                </label>
-                <label htmlFor="ap_filter-perfumes">
-                    <input type="checkbox" id="ap_filter-perfumes" name="filterByCategory" value="Perfumes" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Perfumes
-                </label>
-                <label htmlFor="ap_filter-professionals">
-                    <input type="checkbox" id="ap_filter-professionals" name="filterByCategory" value="Professionals" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Professionals
-                </label>
-                <label htmlFor="ap_filter-saree">
-                    <input type="checkbox" id="ap_filter-saree" name="filterByCategory" value="Saree" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Saree
-                </label>
-                <label htmlFor="ap_filter-shoes">
-                    <input type="checkbox" id="ap_filter-shoes" name="filterByCategory" value="Shoes" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Shoes
-                </label>
-                <label htmlFor="ap_filter-watches">
-                    <input type="checkbox" id="ap_filter-watches" name="filterByCategory" value="Watches" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Watches
-                </label>
-                <label htmlFor="ap_filter-waterBottles">
-                    <input type="checkbox" id="ap_filter-waterBottles" name="filterByCategory" value="Water Bottles" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Water Bottles
-                </label>
-                <label htmlFor="ap_filter-western">
-                    <input type="checkbox" id="ap_filter-western" name="filterByCategory" value="Western" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Western
-                </label>
-                <label htmlFor="ap_filter-winter">
-                    <input type="checkbox" id="ap_filter-winter" name="filterByCategory" value="Winter" className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })} />Winter
-                </label>
+                {
+                    filterableFormCategoryArr.map(category => {
+                        return (
+                            <label htmlFor={category.inputId}>
+                                <input type="checkbox" id={ category.inputId } name="filterByCategory" value={ category.categoryName } className="ap_input-field" onClick={(e) => dispatch({ type: e.target.name, payload: e.target.value })}  />{ category.categoryName }
+                            </label>
+                        )
+                    })
+                }
+                
             </div>
 
             <div className="ap_filter-products">
