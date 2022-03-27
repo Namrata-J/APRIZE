@@ -1,10 +1,15 @@
 import "./productCard.css";
 import { FaRegHeart } from 'react-icons/fa';
 import { useProductsDetail } from "../../contexts/productsDetail-context";
+import { sortPriceFunc, sortRatingFunc, sortDiscountFunc, filterPriceFunc, filterSectionFunc, filterCategoryFunc, filterProductsFunc } from "../../utils/sortAndFilterFunc";
+import { useFilterData } from "../../contexts/filterData-context";
 
 const ProductCard = () => {
 
     const { products } = useProductsDetail();
+    const { state } = useFilterData();
+
+    const filteredProductList = filterProductsFunc(state, filterCategoryFunc(state, filterSectionFunc(state, filterPriceFunc(state, sortDiscountFunc(state, sortRatingFunc(state, sortPriceFunc(state, products)))))));
 
     const getProductClass = (product) => {
         if (product.isNewArrival) {
@@ -31,14 +36,14 @@ const ProductCard = () => {
     }
 
     const getOriginalPrice = (product) => {
-        const originalPrice = parseInt((product.discountedPrice * 100)/(100 - product.discount))
+        const originalPrice = parseInt((product.discountedPrice * 100)/(100 - Number(product.discount)))
         return originalPrice
     } 
 
     return (
         <div className="ap_all-products">
             {
-                products.map((product, index) => {
+                filteredProductList.map((product, index) => {
                     return (
                         <div className={getProductClass(product)} key={index}>
                             { product.isNewArrival ? <div className="badge-type1 fw-4">New</div> : "" }
