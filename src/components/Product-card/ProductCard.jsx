@@ -1,15 +1,10 @@
 import "./productCard.css";
 import { FaRegHeart } from 'react-icons/fa';
-import { useProductsDetail } from "../../contexts/productsDetail-context";
-import { sortPriceFunc, sortRatingFunc, sortDiscountFunc, filterPriceFunc, filterSectionFunc, filterCategoryFunc, filterProductsFunc } from "../../utils/sortAndFilterFunc";
 import { useFilterData } from "../../contexts/filterData-context";
 
 const ProductCard = () => {
 
-    const { products } = useProductsDetail();
-    const { state } = useFilterData();
-
-    const filteredProductList = filterProductsFunc(state, filterCategoryFunc(state, filterSectionFunc(state, filterPriceFunc(state, sortDiscountFunc(state, sortRatingFunc(state, sortPriceFunc(state, products)))))));
+    const { filteredProductList } = useFilterData();
 
     const getProductClass = (product) => {
         if (product.isNewArrival) {
