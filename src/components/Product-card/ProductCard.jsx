@@ -1,10 +1,29 @@
 import "./productCard.css";
 import { FaRegHeart } from 'react-icons/fa';
 import { useFilterData } from "../../contexts/filterData-context";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const ProductCard = () => {
 
-    const { filteredProductList } = useFilterData();
+    const location = useLocation();
+    
+    const category = location?.state?.category
+    
+    const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
+
+    useEffect(() => {
+        if( category ){
+           if( category=== "Men" || category=== "Women" || category=== "Kids" ){
+              if( !(stateOfProductsBeingShown.filterSectionVal.includes(category)) ){
+                  dispatchOfProductsBeingShown({ type: "filterBySection", payload: category })
+              }
+           }else
+              if( !(stateOfProductsBeingShown.filterCategoryVal.includes(category)) ){
+                  dispatchOfProductsBeingShown({ type: "filterByCategory", payload: category })
+                }
+        }
+    },[])
 
     const getProductClass = (product) => {
         if (product.isNewArrival) {
