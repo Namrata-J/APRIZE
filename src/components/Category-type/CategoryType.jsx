@@ -1,5 +1,6 @@
 import React from "react";
 import "./categoryType.css";
+import { Link } from "react-router-dom";
 import { categoryTypeArr } from "../../utils/filteredCategoriesArr";
 
 const CategoryType = () => {
@@ -10,9 +11,11 @@ const CategoryType = () => {
                 {
                     categoryTypeArr.map((category, index) => {
                         return (
-                            <div key={ index }>
+                            <Link to="/Productlisting" key={ index }>
+                                <div>
                                 <img src= { category.img } alt = "Category" className="ap_category-img" />
-                            </div>
+                                </div>
+                            </Link>
                         )
                     })
                 }

@@ -1,8 +1,12 @@
 import React, { useReducer, useContext, createContext } from "react";
+import { sortPriceFunc, sortRatingFunc, sortDiscountFunc, filterPriceFunc, filterSectionFunc, filterCategoryFunc, filterProductsFunc } from "../utils/sortAndFilterFunc";
+import { useProductsDetail } from "./productsDetail-context";
 
 const filterDataContext = createContext(null);
 
 const FilterDataProvider = ({ children }) => {
+
+    const { productsDataFetchedFromApi } = useProductsDetail();
 
     const filterStateReducer = (state, action) => {
         switch (action.type) {
@@ -61,9 +65,11 @@ const FilterDataProvider = ({ children }) => {
         filterProductsVal: []
     };
 
-    const [state, dispatch] = useReducer(filterStateReducer, initialObj);
+    const [ stateOfProductsBeingShown , dispatchOfProductsBeingShown ] = useReducer(filterStateReducer, initialObj);
 
-    return <filterDataContext.Provider value={{ state, dispatch }}>
+    const filteredProductList = filterProductsFunc(stateOfProductsBeingShown, filterCategoryFunc(stateOfProductsBeingShown, filterSectionFunc(stateOfProductsBeingShown, filterPriceFunc(stateOfProductsBeingShown, sortDiscountFunc(stateOfProductsBeingShown, sortRatingFunc(stateOfProductsBeingShown, sortPriceFunc(stateOfProductsBeingShown, productsDataFetchedFromApi)))))));
+
+    return <filterDataContext.Provider value={{ stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList }}>
         { children }
     </filterDataContext.Provider>
 }

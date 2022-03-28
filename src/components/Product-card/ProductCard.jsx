@@ -1,15 +1,10 @@
 import "./productCard.css";
 import { FaRegHeart } from 'react-icons/fa';
-import { useProductsDetail } from "../../contexts/productsDetail-context";
-import { sortPriceFunc, sortRatingFunc, sortDiscountFunc, filterPriceFunc, filterSectionFunc, filterCategoryFunc, filterProductsFunc } from "../../utils/sortAndFilterFunc";
 import { useFilterData } from "../../contexts/filterData-context";
 
 const ProductCard = () => {
 
-    const { products } = useProductsDetail();
-    const { state } = useFilterData();
-
-    const filteredProductList = filterProductsFunc(state, filterCategoryFunc(state, filterSectionFunc(state, filterPriceFunc(state, sortDiscountFunc(state, sortRatingFunc(state, sortPriceFunc(state, products)))))));
+    const { filteredProductList } = useFilterData();
 
     const getProductClass = (product) => {
         if (product.isNewArrival) {
@@ -47,7 +42,7 @@ const ProductCard = () => {
                     return (
                         <div className={getProductClass(product)} key={index}>
                             { product.isNewArrival ? <div className="badge-type1 fw-4">New</div> : "" }
-                            { !product.isInStock ? <div class="badge-type3">Stock Out</div> : "" }
+                            { !product.isInStock ? <div className="badge-type3">Stock Out</div> : "" }
                             <i><FaRegHeart /></i>
 
                             <div className="card-w-badge-subcontainer1" style= {{ backgroundImage: `url(${ product.img })`}}>

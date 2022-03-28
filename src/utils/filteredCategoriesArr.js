@@ -9,7 +9,7 @@ const categoryTypeArr = [
         img: "https://www.levi.in/on/demandware.static/-/Sites-LeviIN-Library/en_IN/dwf5fa28c2/images/homepage/CategoryTiles/CategoryTilesHomePage/Women%27s%20Jeans.jpg"
     },
     {
-        category: "MakeUp",
+        category: "Makeup",
         img: "https://www.pinkvilla.com/imageresize/amazon_republic_day_sale_best_eye_makeup_products_to_grab_under_rs_600.jpg?width=752&format=webp&t=pvorg"
     },
     {
