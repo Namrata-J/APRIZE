@@ -42,7 +42,7 @@ const ProductCard = () => {
                     return (
                         <div className={getProductClass(product)} key={index}>
                             { product.isNewArrival ? <div className="badge-type1 fw-4">New</div> : "" }
-                            { !product.isInStock ? <div class="badge-type3">Stock Out</div> : "" }
+                            { !product.isInStock ? <div className="badge-type3">Stock Out</div> : "" }
                             <i><FaRegHeart /></i>
 
                             <div className="card-w-badge-subcontainer1" style= {{ backgroundImage: `url(${ product.img })`}}>
