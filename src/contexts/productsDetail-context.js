@@ -5,16 +5,16 @@ const productsDetailContext = createContext({ products: []})
 
 const ProductsDetailProvider = ({ children }) => {
     
-    const [products, setProducts] = useState([]);
+    const [productsDataFetchedFromApi, setProductsDataFetchedFromApi] = useState([]);
 
     useEffect(() =>
         (async () => {
             const ProductResponse = await axios.get("api/products")
-            setProducts(ProductResponse.data.products)
+            setProductsDataFetchedFromApi(ProductResponse.data.products)
         })(), []
     );
 
-    return <productsDetailContext.Provider value= {{ products, setProducts }}>
+    return <productsDetailContext.Provider value= {{ productsDataFetchedFromApi, setProductsDataFetchedFromApi }}>
         { children }
     </productsDetailContext.Provider>
 } 
