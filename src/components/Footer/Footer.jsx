@@ -1,7 +1,11 @@
 import "./footer.css";
 import { Link } from "react-router-dom";
+import { useFilterData } from "../../contexts/filterData-context";
 
 const Footer = () => {
+
+    const { dispatchOfProductsBeingShown } = useFilterData();
+
     return (
         <div className="ap_footer-container">
             <div className="ap_footer">
@@ -30,7 +34,7 @@ const Footer = () => {
                         <Link to="/Cart">Cart</Link>
                         <Link to="/">Home</Link>
                         <Link to="/Wishlist">Wishlist</Link>
-                        <Link to="/Productlisting">Product listing</Link>
+                        <Link to="/Productlisting" onClick= {() => dispatchOfProductsBeingShown({ type: "clear" })}>Product listing</Link>
                     </div>
                 </div>
             </div>
