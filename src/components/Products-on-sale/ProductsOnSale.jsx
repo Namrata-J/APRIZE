@@ -1,5 +1,6 @@
 import { productsOnSaleArr } from "../../utils/filteredCategoriesArr";
 import "./productsOnSale.css";
+import { Link } from "react-router-dom";
 
 const ProductsOnSale = () =>{
     return (
@@ -8,9 +9,9 @@ const ProductsOnSale = () =>{
                 {
                     productsOnSaleArr.map((productOnSale, index) => {
                         return (
-                            <div key={ index }>
+                            <Link to='/Productlisting' key={ index } state= { productOnSale }>
                                 <img src= { productOnSale.img } alt= "product On Sale" className="ap_productOnSale-img" />
-                            </div>
+                            </Link>
                         )
                     })
                 }

@@ -1,5 +1,6 @@
 import { discountedProductsArr } from "../../utils/filteredCategoriesArr";
 import "./discountedProducts.css";
+import { Link } from "react-router-dom";
 
 const DiscountedProducts = () => {
     return (
@@ -8,9 +9,9 @@ const DiscountedProducts = () => {
                  {
                      discountedProductsArr.map((discountedProducts, index) => {
                          return (
-                             <div key= { index }>
+                             <Link to="/Productlisting" key= { index } state= { discountedProducts }>
                                  <img src= { discountedProducts.img } alt= "discounted Product" className="ap_discountedProduct-img" />
-                             </div>
+                             </Link>
                          )
                      })
                  }
