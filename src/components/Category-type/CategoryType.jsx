@@ -11,10 +11,8 @@ const CategoryType = () => {
                 {
                     categoryTypeArr.map((category, index) => {
                         return (
-                            <Link to="/Productlisting" key={ index }>
-                                <div>
+                            <Link to="/Productlisting" key={ index } state={ category }>
                                 <img src= { category.img } alt = "Category" className="ap_category-img" />
-                                </div>
                             </Link>
                         )
                     })
