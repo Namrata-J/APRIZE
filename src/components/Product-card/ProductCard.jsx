@@ -9,6 +9,12 @@ const ProductCard = () => {
     const location = useLocation();
     
     const category = location?.state?.category
+
+    const newArrivalCategory = location?.state?.isNewArrival
+
+    const discountedProducts = location?.state?.hasDiscount
+
+    const productOnSale = location?.state?.onSale
     
     const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
 
@@ -22,6 +28,18 @@ const ProductCard = () => {
               if( !(stateOfProductsBeingShown.filterCategoryVal.includes(category)) ){
                   dispatchOfProductsBeingShown({ type: "filterByCategory", payload: category })
                 }
+        }
+
+        if( newArrivalCategory ){
+            dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isNewArrival" })
+        }
+
+        if( discountedProducts ){
+            dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "hasDiscount" })
+        }
+
+        if( productOnSale ){
+            dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isInSale" })
         }
     },[])
 
