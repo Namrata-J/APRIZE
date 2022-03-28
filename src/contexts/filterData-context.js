@@ -1,8 +1,13 @@
 import React, { useReducer, useContext, createContext } from "react";
+import { sortPriceFunc, sortRatingFunc, sortDiscountFunc, filterPriceFunc, filterSectionFunc, filterCategoryFunc, filterProductsFunc } from "../utils/sortAndFilterFunc";
+import { useProductsDetail } from "./productsDetail-context";
 
 const filterDataContext = createContext(null);
 
 const FilterDataProvider = ({ children }) => {
+
+    
+    const { products } = useProductsDetail();
 
     const filterStateReducer = (state, action) => {
         switch (action.type) {
@@ -63,7 +68,9 @@ const FilterDataProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(filterStateReducer, initialObj);
 
-    return <filterDataContext.Provider value={{ state, dispatch }}>
+    const filteredProductList = filterProductsFunc(state, filterCategoryFunc(state, filterSectionFunc(state, filterPriceFunc(state, sortDiscountFunc(state, sortRatingFunc(state, sortPriceFunc(state, products)))))));
+
+    return <filterDataContext.Provider value={{ state, dispatch, filteredProductList }}>
         { children }
     </filterDataContext.Provider>
 }
