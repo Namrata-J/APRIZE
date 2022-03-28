@@ -8,12 +8,16 @@
 }
 
 .ap_home-page-shopNowImg button {
-    color: var(--white-color);
     font-size: larger;
     padding: 1rem 1.5rem;
     position: absolute;
     top: 50%;
     left: 10%;
+}
+
+.ap_home-page-shopNowImg button a {
+    color: var(--white-color);
+    text-decoration: none;
 }
 
 .ap_home-page-shopNowImg p {
