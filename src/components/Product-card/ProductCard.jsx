@@ -22,23 +22,28 @@ const ProductCard = () => {
         if( category ){
            if( category=== "Men" || category=== "Women" || category=== "Kids" ){
               if( !(stateOfProductsBeingShown.filterSectionVal.includes(category)) ){
+                  dispatchOfProductsBeingShown({ type: "clear" })
                   dispatchOfProductsBeingShown({ type: "filterBySection", payload: category })
               }
            }else
               if( !(stateOfProductsBeingShown.filterCategoryVal.includes(category)) ){
+                  dispatchOfProductsBeingShown({ type: "clear" })
                   dispatchOfProductsBeingShown({ type: "filterByCategory", payload: category })
                 }
         }
 
         if( newArrivalCategory ){
+            dispatchOfProductsBeingShown({ type: "clear" })
             dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isNewArrival" })
         }
 
         if( discountedProducts ){
+            dispatchOfProductsBeingShown({ type: "clear" })
             dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "hasDiscount" })
         }
 
         if( productOnSale ){
+            dispatchOfProductsBeingShown({ type: "clear" })
             dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isInSale" })
         }
     },[])
