@@ -5,6 +5,7 @@ const WishlistProduct = () => {
     return (
         <div className="ap_all-wishlisted-products">
             <h3 className="ap_wislist-main-section-heading a-tc">My wishList</h3>
+            
             <div className="ap_wislisted-products-container">
 
                 <div className="card-w-badge-type1 card-w-badge b-rad1">
