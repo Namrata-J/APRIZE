@@ -1,0 +1,55 @@
+.ap_logout-card-container {
+    margin: auto;
+}
+
+.ap_logout-first-section{
+    align-items: center;
+    border-bottom: 1px solid var(--lightest-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.ap_logout-first-section p {
+    color: var(--medium-gray);
+    font-size: small;
+}
+
+.ap_logout-manage-account p{
+    border: 1px solid var(--light-gray);
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.ap_logout-manage-account a{
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+.ap_logout-second-section{
+    border-bottom: 1px solid var(--lightest-gray);
+    padding: 0.5rem;
+}
+
+.ap_logout-second-section a{
+    color: var(--black);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.ap_logout-second-section span{
+    font-size: larger;
+    padding-right: 0.3rem;
+}
+
+.ap_logout-btn{
+    margin-top: 1rem;
+}
+
+.ap_logout-btn a{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+

@@ -1,0 +1,5 @@
+@import url(../../../utils/base.css);
+
+.ap_signup-page {
+    background-color: var(--most-lightest-gray);
+}
