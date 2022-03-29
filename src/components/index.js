@@ -11,5 +11,7 @@ import { Product } from "./Product/Product";
 import { ProductCard } from "./Product-card/ProductCard";
 import { FloatingBtn } from "./Floating-Btn/FloatingBtn";
 import { FilterableForm } from "./Filterable-Form/FilterableForm";
+import { WishlistProduct } from "./Wishlisted-Product/WishlistedProducts";
+import { ProductsInCart } from "./Products-In-Cart/ProductsInCart";
 
-export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm };
+export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart };
