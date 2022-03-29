@@ -13,5 +13,8 @@ import { FloatingBtn } from "./Floating-Btn/FloatingBtn";
 import { FilterableForm } from "./Filterable-Form/FilterableForm";
 import { WishlistProduct } from "./Wishlisted-Product/WishlistedProducts";
 import { ProductsInCart } from "./Products-In-Cart/ProductsInCart";
+import { LogInCard } from "./LogIn-card/LogInCard";
+import { LogOutCard } from "./LogOut-card/LogOutCard";
+import { SignUpCard } from "./SignUp-card/SignUpCard";
 
-export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart };
+export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard };
