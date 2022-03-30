@@ -5,7 +5,7 @@ const wishlistContext = createContext({ state: [] });
 const WishlistProvider = ({ children }) => {
 
     const getLikeButtonStyle = (product) => {
-        if(stateOfWishlist.includes(product)){
+        if(stateOfWishlist.some(item => item._id === product._id)){
             return "var(--light-red)"
         }else
             return "var(--black)"
@@ -14,12 +14,12 @@ const WishlistProvider = ({ children }) => {
     const wishlistReducer = (stateOfWishlist, action) => {
         switch(action.type){
             case "MOVE_TO_WISHLIST_FROM_CART":
-                if( !(stateOfWishlist.includes(action.payload)) ){
+                if( !(stateOfWishlist.some(item => item._id === action.payload._id)) ){
                     return  [ ...stateOfWishlist, action.payload ]
                 }else
                     return stateOfWishlist
             case "ADD_TO_WISHLIST":
-                if( !(stateOfWishlist.includes(action.payload)) ){
+                if( !(stateOfWishlist.some(item => item._id === action.payload._id)) ){
                     return  [ ...stateOfWishlist, action.payload ]
                 }else
                     return stateOfWishlist.filter(item => item._id!==action.payload._id)
