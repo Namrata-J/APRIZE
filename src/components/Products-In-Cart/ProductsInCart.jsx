@@ -44,9 +44,9 @@ const ProductsInCart = () => {
                                             <div className="ap_myCart-product-quantity-details">
                                                 <div className="ap_myCart-product-quantity-heading a-tl">Quantity:</div>
                                                 <div className="ap_myCart-product-quantity-controls a-tl">
-                                                    <div className="ap_quantity-increment-btn quantity-control control-display-btn">+</div>
-                                                    <div className="ap_quantity-display quantity-control">1</div>
-                                                    <div className="ap_quantity-decrement-btn quantity-control control-display-btn">-</div>
+                                                    <div className="ap_quantity-increment-btn quantity-control control-display-btn" onClick={() => dispatchOfCart({ type: "INCREASE_QUANTITY", payload: cartProduct })}>+</div>
+                                                    <div className="ap_quantity-display quantity-control">{ cartProduct.qt }</div>
+                                                    <div className="ap_quantity-decrement-btn quantity-control control-display-btn" onClick={() => dispatchOfCart({ type: "DECREASE_QUANTITY", payload: cartProduct })}>-</div>
                                                 </div>
                                             </div>
                                             <div className="ap_myCart-product-action-btns">
