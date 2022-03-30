@@ -8,6 +8,7 @@ import { SearchBarProvider } from "./contexts/searchBar-context";
 import { ProductsDetailProvider } from "./contexts/productsDetail-context";
 import { FilterDataProvider } from "./contexts/filterData-context";
 import { WishlistProvider } from "./contexts/wishlist-context";
+import { CartProvider } from "./contexts/cart-context";
 
 // Call make Server
 makeServer();
@@ -17,9 +18,11 @@ ReactDOM.render(
       <FilterDataProvider>
         <SearchBarProvider>
           <WishlistProvider>
-            <BrowserRouter>
-              <App />
-            </BrowserRouter>
+            <CartProvider>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </CartProvider>
           </WishlistProvider>
         </SearchBarProvider>
       </FilterDataProvider>
