@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { getProductClass, getOriginalPrice } from "../../utils/productutilFuncs";
 import { useWishlist } from "../../contexts/wishlist-context";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../contexts/cart-context";
 
 const ProductCard = () => {
 
@@ -22,6 +23,8 @@ const ProductCard = () => {
     const navigate = useNavigate();
 
     const { dipatchOfWishlist, getLikeButtonStyle } = useWishlist();
+
+    const { dispatchOfCart } = useCart();
     
     const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
 
@@ -81,7 +84,7 @@ const ProductCard = () => {
                                 </div>
                             </div>
                             <div className="card-w-badge-subcontainer3">
-                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } >Add To Cart</button>
+                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: product })} >Add to Cart</button>
                                 <button className="et_so-btn action-color btn" disabled = { !product.isInStock } onClick={() => navigate("/Cart")} >Buy Now</button>
                             </div>
                         </div>
