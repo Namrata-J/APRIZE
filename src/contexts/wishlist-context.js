@@ -13,6 +13,11 @@ const WishlistProvider = ({ children }) => {
 
     const wishlistReducer = (stateOfWishlist, action) => {
         switch(action.type){
+            case "MOVE_TO_WISHLIST_FROM_CART":
+                if( !(stateOfWishlist.includes(action.payload)) ){
+                    return  [ ...stateOfWishlist, action.payload ]
+                }else
+                    return stateOfWishlist
             case "ADD_TO_WISHLIST":
                 if( !(stateOfWishlist.includes(action.payload)) ){
                     return  [ ...stateOfWishlist, action.payload ]
