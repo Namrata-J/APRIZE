@@ -1,4 +1,5 @@
 import React, {useReducer, useContext, createContext } from "react";
+import { getOriginalPrice } from "../utils/productutilFuncs"; 
 
 const cartContext = createContext({ state: [] });
 
@@ -22,7 +23,13 @@ const CartProvider = ({ children }) => {
 
     const [ stateOfCart, dispatchOfCart ] = useReducer( cartReducer, [] );
 
-    return <cartContext.Provider value={{ stateOfCart, dispatchOfCart }}>
+    const priceDetailsReducer = (acc, curr) => {
+        return { ...acc, totalOriginalPrice: (acc.totalOriginalPrice + getOriginalPrice(curr))*curr.qt, totalDiscountedPrice: (acc.totalDiscountedPrice + curr.discountedPrice)*curr.qt }
+    }
+
+    const priceDetailsObj = stateOfCart.reduce(priceDetailsReducer, { totalOriginalPrice: 0, totalDiscountedPrice: 0 });
+
+    return <cartContext.Provider value={{ stateOfCart, dispatchOfCart, priceDetailsObj }}>
         { children }
     </cartContext.Provider>
 }
