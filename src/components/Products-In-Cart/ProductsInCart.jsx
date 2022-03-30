@@ -7,7 +7,7 @@ import { useCart } from "../../contexts/cart-context";
 const ProductsInCart = () => {
 
     const { dipatchOfWishlist } = useWishlist();
-    const { stateOfCart:itemsInCart, dispatchOfCart } = useCart();
+    const { stateOfCart:itemsInCart, dispatchOfCart, priceDetailsObj } = useCart();
 
     return (
         <div className="ap_all-addedToCart-products">
@@ -70,12 +70,12 @@ const ProductsInCart = () => {
                                 </div>
                                 <div className="ap_pricedetails-card-subContainer2 priceDetails-subContainer-borderBtm priceDetails-card-subcontainer">
                                     <div className="ap_product-priceDetail">
-                                        <div className="ap_addedToCart-products-original-price-title">Price(2 items)</div>
-                                        <div className="ap_addedToCart-products-original-price">₹4000</div>
+                                        <div className="ap_addedToCart-products-original-price-title">Price({ itemsInCart.length } items)</div>
+                                        <div className="ap_addedToCart-products-original-price">₹{ priceDetailsObj.totalOriginalPrice }</div>
                                     </div>
                                     <div className="ap_product-priceDetail">
                                         <div className="ap_addedToCart-products-discount-deduction-title">Discount</div>
-                                        <div className="ap_addedToCart-products-discount-deduction">-₹400</div>
+                                        <div className="ap_addedToCart-products-discount-deduction">-₹{ priceDetailsObj.totalOriginalPrice - priceDetailsObj.totalDiscountedPrice }</div>
                                     </div>
                                     <div className="ap_product-priceDetail">
                                         <div className="ap_delivery-charges-title">Delivery charges</div>
@@ -85,11 +85,11 @@ const ProductsInCart = () => {
                                 <div className="ap_pricedetails-card-subContainer3 priceDetails-subContainer-borderBtm priceDetails-card-subcontainer">
                                     <div className="ap_product-priceDetail">
                                         <div className="ap_addedToCart-products-total-amount-title">Total amount</div>
-                                        <div className="ap_addedToCart-products-total-amount">₹3700</div>
+                                        <div className="ap_addedToCart-products-total-amount">₹{ (priceDetailsObj.totalDiscountedPrice) + 10 }</div>
                                     </div>
                                 </div>
                                 <div className="ap_pricedetails-card-subContainer4 priceDetails-card-subcontainer">
-                                    <div className="ap_addedToCart-products-saved-amount">You will save ₹300 on this order</div>
+                                    <div className="ap_addedToCart-products-saved-amount">You will save ₹{ (priceDetailsObj.totalOriginalPrice - priceDetailsObj.totalDiscountedPrice) - 10 } on this order</div>
                                     <button className="et_p-simple-btn action-color btn" >Place Order</button>
                                 </div>
                             </div>
