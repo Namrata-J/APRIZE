@@ -24,7 +24,7 @@ const ProductCard = () => {
 
     const { dipatchOfWishlist, getLikeButtonStyle } = useWishlist();
 
-    const { dispatchOfCart } = useCart();
+    const { stateOfCart, dispatchOfCart } = useCart();
     
     const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
 
@@ -84,7 +84,7 @@ const ProductCard = () => {
                                 </div>
                             </div>
                             <div className="card-w-badge-subcontainer3">
-                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: product })} >Add To Cart</button>
+                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: product })} > { stateOfCart.some(item => item._id === product._id)? "Added" : "Add To Cart" }</button>
                                 <button className="et_so-btn action-color btn" disabled = { !product.isInStock } onClick={() => navigate("/Cart")} >Buy Now</button>
                             </div>
                         </div>
