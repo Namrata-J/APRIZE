@@ -155,6 +155,18 @@
     color: var(--white-color);
 }
 
+.ap_empty-cart-img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ap_empty-cart-img {
+    clip-path: circle();
+    height: 20rem;
+    width: 20rem;
+}
+
 @media only screen and (max-width: 980px) {
     .ap_addedToCart-products-section {
         gap: 1rem;
