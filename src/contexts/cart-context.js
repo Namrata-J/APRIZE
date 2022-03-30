@@ -1,5 +1,4 @@
 import React, {useReducer, useContext, createContext } from "react";
-import { ProductsInCart } from "../components/Products-In-Cart/ProductsInCart";
 
 const cartContext = createContext({ state: [] });
 
