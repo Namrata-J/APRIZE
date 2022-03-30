@@ -44,6 +44,12 @@
     color: var(--white-color);
 }
 
+.et_badges-on-icons-container span {
+    color: var(--white-color);
+    top: -7px;
+    right: -12px;
+}
+
 .ap_popUp-container {
     position: absolute;
     top: 10rem;
@@ -80,7 +86,7 @@
     }
 
     .ap_header-iconsAndBtns {
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     .ap_popUp-search-section {
