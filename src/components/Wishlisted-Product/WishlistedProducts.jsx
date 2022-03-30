@@ -3,10 +3,12 @@ import { FaRegHeart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { getProductClass, getOriginalPrice } from "../../utils/productutilFuncs";
 import { useWishlist } from "../../contexts/wishlist-context";
+import { useCart } from "../../contexts/cart-context";
 
 const WishlistProduct = () => {
 
     const { stateOfWishlist:wishlistedProductsToBeShown, dipatchOfWishlist } = useWishlist();
+    const { dispatchOfCart } = useCart();
 
     return (
         <div className="ap_all-wishlisted-products">
@@ -44,7 +46,7 @@ const WishlistProduct = () => {
                                         </div>
                                     </div>
                                     <div className="card-w-badge-subcontainer3">
-                                        <button className="et_p-simple-btn action-color btn" disabled = { !wishlistedProduct.isInStock } >Add To Cart</button>
+                                        <button className="et_p-simple-btn action-color btn" disabled = { !wishlistedProduct.isInStock } onClick={() => {dispatchOfCart({ type: "ADD_TO_CART", payload: wishlistedProduct }); dipatchOfWishlist({ type: "REMOVE_FROM_WISHLIST", payload: wishlistedProduct })}} >Add To Cart</button>
                                         <button className="et_so-btn action-color btn" onClick={() => dipatchOfWishlist({ type: "REMOVE_FROM_WISHLIST", payload: wishlistedProduct })}>Remove</button>
                                     </div>
                                 </div>
