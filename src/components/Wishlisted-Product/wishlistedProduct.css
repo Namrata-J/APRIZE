@@ -16,6 +16,23 @@
     color: var(--light-red);
 }
 
+.ap_empty-wishlist-img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ap_empty-wishlist-img {
+    clip-path: circle();
+    height: 20rem;
+    width: 20rem;
+}
+
+.ap_shop-Now-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 958px) {
     .ap_wislisted-products-container {
         padding: 1rem 2rem;
@@ -25,5 +42,10 @@
 @media only screen and (max-width: 370px) {
     .ap_wislisted-products-container {
         padding: 1rem;
+    }
+
+    .ap_empty-cart-img {
+        height: 15rem;
+        width: 15rem;
     }
 }

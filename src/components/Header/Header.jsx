@@ -3,10 +3,15 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import { FaHeart, FaShoppingCart, FaSearch } from 'react-icons/fa';
 import { useSearchBar } from "../../contexts/searchBar-context";
+import { useCart } from "../../contexts/cart-context";
+import { useWishlist } from "../../contexts/wishlist-context";
 
 const Header = () => {
 
     const { visibility, setVisibility ,getPopUpSearchBarVisibility } = useSearchBar();
+
+    const { stateOfCart } = useCart();
+    const { stateOfWishlist } = useWishlist();
 
     return (
         <div>
@@ -28,8 +33,30 @@ const Header = () => {
                             </div>
                         </Link>
                         <span className="ap_header-icon search-icon" onClick={() => getPopUpSearchBarVisibility()} ><FaSearch /></span>
-                        <Link to="/Wishlist" className="ap_header-icon" ><FaHeart /></Link>
-                        <Link to="/Cart" className="ap_header-icon" ><FaShoppingCart /></Link>
+                        {
+                            stateOfWishlist.length === 0?
+                            <Link to="/Wishlist" className="ap_header-icon" >
+                                <FaHeart/>
+                            </Link> :
+                            <Link to="/Wishlist" className="ap_header-icon" >
+                                <div className="et_badges-on-icons-container">
+                                   <i><FaHeart/></i>
+                                   <span class="b-rad4">{ stateOfWishlist.length }</span>
+                                </div>
+                            </Link>
+                        }
+                        {
+                            stateOfCart.length === 0? 
+                            <Link to="/Cart" className="ap_header-icon" >
+                                <FaShoppingCart />
+                            </Link> : 
+                            <Link to="/Cart" className="ap_header-icon" >
+                                <div className="et_badges-on-icons-container">
+                                    <i><FaShoppingCart /></i>
+                                    <span class="b-rad4">{ stateOfCart.length }</span>
+                                </div>
+                            </Link>
+                        }
                     </div>
 
                 </div>

@@ -3,6 +3,10 @@ import { FaRegHeart } from 'react-icons/fa';
 import { useFilterData } from "../../contexts/filterData-context";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { getProductClass, getOriginalPrice } from "../../utils/productutilFuncs";
+import { useWishlist } from "../../contexts/wishlist-context";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../contexts/cart-context";
 
 const ProductCard = () => {
 
@@ -15,6 +19,12 @@ const ProductCard = () => {
     const discountedProducts = location?.state?.hasDiscount
 
     const productOnSale = location?.state?.onSale
+
+    const navigate = useNavigate();
+
+    const { dipatchOfWishlist, getLikeButtonStyle } = useWishlist();
+
+    const { stateOfCart, dispatchOfCart } = useCart();
     
     const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
 
@@ -48,35 +58,6 @@ const ProductCard = () => {
         }
     },[])
 
-    const getProductClass = (product) => {
-        if (product.isNewArrival) {
-            if (product.isNewArrival && !product.isInStock) {
-                return "card-w-badge-type1 card-w-badge-type3 card-w-badge b-rad1"
-            } else {
-                return "card-w-badge-type1 card-w-badge b-rad1"
-            }
-        } else {
-            if (product.isTrending) {
-                if (product.isTrending && !product.isInStock) {
-                    return "card-w-badge-type2 card-w-badge-type3 card-w-badge b-rad1"
-                } else {
-                    return "card-w-badge-type2 card-w-badge b-rad1"
-                }
-            } else {
-                if (product.isInStock) {
-                    return "card-w-badge-type1 card-w-badge b-rad1"
-                } else {
-                    return "card-w-badge-type3 card-w-badge b-rad1"
-                }
-            }
-        }
-    }
-
-    const getOriginalPrice = (product) => {
-        const originalPrice = parseInt((product.discountedPrice * 100)/(100 - Number(product.discount)))
-        return originalPrice
-    } 
-
     return (
         <div className="ap_all-products">
             {
@@ -85,7 +66,7 @@ const ProductCard = () => {
                         <div className={getProductClass(product)} key={index}>
                             { product.isNewArrival ? <div className="badge-type1 fw-4">New</div> : "" }
                             { !product.isInStock ? <div className="badge-type3">Stock Out</div> : "" }
-                            <i><FaRegHeart /></i>
+                            <i onClick={() => dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })} style={{ color: getLikeButtonStyle(product) }} ><FaRegHeart /></i>
 
                             <div className="card-w-badge-subcontainer1" style= {{ backgroundImage: `url(${ product.img })`}}>
                             </div>
@@ -103,8 +84,8 @@ const ProductCard = () => {
                                 </div>
                             </div>
                             <div className="card-w-badge-subcontainer3">
-                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } >Add To Cart</button>
-                                <button className="et_so-btn action-color btn" disabled = { !product.isInStock } >Buy Now</button>
+                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: product })} > { stateOfCart.some(item => item._id === product._id)? "Added" : "Add To Cart" }</button>
+                                <button className="et_so-btn action-color btn" disabled = { !product.isInStock } onClick={() => navigate("/Cart")} >Buy Now</button>
                             </div>
                         </div>
                     )
@@ -114,4 +95,4 @@ const ProductCard = () => {
     );
 }
 
-export { ProductCard };
+export { ProductCard, getProductClass, getOriginalPrice };
