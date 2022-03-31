@@ -1,13 +1,13 @@
 const getProductClass = (product) => {
     if (product.isNewArrival) {
-        if (product.isNewArrival && !product.isInStock) {
+        if ( !product.isInStock ) {
             return "card-w-badge-type1 card-w-badge-type3 card-w-badge b-rad1"
         } else {
             return "card-w-badge-type1 card-w-badge b-rad1"
         }
     } else {
         if (product.isTrending) {
-            if (product.isTrending && !product.isInStock) {
+            if ( !product.isInStock ) {
                 return "card-w-badge-type2 card-w-badge-type3 card-w-badge b-rad1"
             } else {
                 return "card-w-badge-type2 card-w-badge b-rad1"
