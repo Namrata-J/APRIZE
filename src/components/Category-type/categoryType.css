@@ -8,6 +8,19 @@
     overflow-x: scroll;
 }
 
+.ap_scrollable-section-description {
+    align-items: center;
+    display: flex;
+    width: fit-content;
+}
+
+.ap_scrollable-section-description p {
+    color: var(--action);
+    font-family: ;
+    text-align: left;
+    width: 7rem;
+}
+
 .ap_category-img {
     clip-path: circle();
     height: 4.5rem;

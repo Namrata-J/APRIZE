@@ -8,6 +8,9 @@ const CategoryType = () => {
     return (
        <div className="ap_homePage-filtered-categories">
            <div className="ap_scrollable-section">
+               <div className="ap_scrollable-section-description">
+                   <p>What are you looking for?</p>
+               </div>
                 {
                     categoryTypeArr.map((category, index) => {
                         return (

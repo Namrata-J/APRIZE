@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .ap_header{
     background-color: var(--white-color);
-    box-shadow: 0px 0px 5px var(--black);
+    box-shadow: 0px 0px 2px var(--action);
+    padding: 1rem 0rem;
 }
 
 .ap_header-content-container {
@@ -8,88 +12,214 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
-    width: 80%;
+    width: 90%;
 }
 
-.ap_logo {
+.ap_hamburgerAndLogo-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.ap_header-hamburger-icon {
+    display: none;
+}
+
+.ap_logo-container {
     text-decoration: none;
 }
 
-.ap_header-searchBar {
+.ap_logo {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+}
+
+.ap_logo p {
+    color: var(--light-gray);
+    font-size: 10px;
+}
+
+.ap_logo-title {
+    border-right: 1px solid var(--lightest-gray);
+    font-family: 'Gruppo', cursive;
+    font-size: 1.7rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.ap_logo-subcontainer2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    padding-left: 0.6rem;
+}
+
+.ap_logo-subcontainer2:hover p{
+    color: var(--medium-gray);
+}
+
+.ap_logo-subcontainer2 p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+.ap_header-rounded-searchBar-with-icon-container {
+    width: 30rem;
+}
+
+.ap_rounded-swi {
+    align-items: center;
+    border: 1px solid var(--medium-gray);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
     width: 100%;
+}
+
+.ap_rounded-swi input::placeholder {
+    color: var(--medium-gray);
+    font-size: 12px;
+}
+
+.ap_rounded-swi input {
+    color: var(--light-gray);
+    border: transparent;
+    outline: transparent;
+    margin-left: 0.5rem;
+}
+
+.ap_header-searchBar-icon {
+    color: var(--light-gray);
+    font-size: large;
 }
 
 .ap_header-iconsAndBtns {
     align-items: center;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.search-icon {
-    cursor: pointer;
+.ap_header-iconsAndBtns .search-icon {
+    display: none;
+}
+
+.ap_header-user-icon {
+    position: relative;
 }
 
 .ap_header-icon {
+    cursor: pointer;
     color: var(--action);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-top: 5px;
 }
 
-.badge-on-btn {
-    display: inline-block;
-    margin: 0.7rem 0rem;
+.ap_header-icon:hover {
+    color: var(--medium-gray);
 }
 
-.badge-on-btn button {
-    background-color: var(--action);
-    color: var(--white-color);
+.ap_user-private-pages {
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 5px 0px var(--action);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    right: 0px;
+    width: fit-content;
+}
+
+.ap_header-user-icon:hover .ap_user-private-pages {
+    display: flex;
+}
+
+.ap_user-private-pages a {
+    text-decoration: none;
+}
+
+.ap_user-private-pages p {
+    color: var(--action);
+    font-size: 0.9rem;
+}
+
+.ap_user-private-pages p:hover {
+    color: var(--medium-gray);
+}
+
+.et_badges-on-icons-container {
+    margin: 0rem;
 }
 
 .et_badges-on-icons-container span {
     color: var(--white-color);
-    top: -7px;
-    right: -12px;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    top: -5px;
+    right: -10px;
 }
 
-.ap_popUp-container {
-    position: absolute;
-    top: 10rem;
-    width: 100%;
-}
-
-.ap_popUp-search-section {
-    background-color: var(--white-color);
-    box-shadow: 0px 0px 2px var(--black);
-    width: 70%;
-    margin: auto;
-    padding: 2rem;
-    position: relative;
-}
-
-.ap_close-popUp {
-    cursor: pointer;
-    position: absolute;
-    right: 7px;
-    top: 5px;
-}
-
-.ap_searchBar {
-    border: transparent;
-    box-shadow: 0px 0px 2px var(--action);
-    padding: 0.3rem 0.8rem;
-    width: 80%;
-    outline: none;
-}
-
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 995px) {
     .ap_header-content-container {
-        width: 90%;
+        width: 95%;
+    }
+
+    .ap_header-rounded-searchBar-with-icon-container {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .ap_header-rounded-searchBar-with-icon-container {
+        display: none;
+    }
+
+    .ap_header-iconsAndBtns .search-icon {
+        display: inline-block;
+    }
+
+    .ap_header-user-icon {
+        display: none;
+    }
+
+    .ap_header-hamburger-icon {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 495px) {
+    .ap_header-icon {
+        font-size: 1.2rem;
+    }
+
+    .ap_logo {
+        gap: 0rem;
+    }
+
+    .ap_logo p {
+        font-size: 8px;
+    }
+
+    .ap_logo-title {
+        font-size: 1.3rem;
+        padding: 0.1rem 0.5rem 0.2rem 0rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .ap_logo-title {
+        border-right: none;
+    }
+
+    .ap_logo-subcontainer2 {
+        display: none;
     }
 
     .ap_header-iconsAndBtns {
-        gap: 0.5rem;
-    }
-
-    .ap_popUp-search-section {
-        width: 90%;
+        gap: 1rem;
     }
 }
+
+
+

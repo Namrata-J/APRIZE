@@ -6,5 +6,6 @@
 }
 
 :root {
+    --medium-gray: rgb(197, 202, 204);
     --most-lightest-gray: rgb(241, 245, 245);
 }
