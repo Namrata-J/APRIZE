@@ -16,5 +16,6 @@ import { ProductsInCart } from "./Products-In-Cart/ProductsInCart";
 import { LogInCard } from "./LogIn-card/LogInCard";
 import { LogOutCard } from "./LogOut-card/LogOutCard";
 import { SignUpCard } from "./SignUp-card/SignUpCard";
+import { AprizeLogo } from "./Aprize-logo/AprizeLogo";
 
-export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard };
+export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo };

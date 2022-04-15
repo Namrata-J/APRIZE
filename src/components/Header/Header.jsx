@@ -1,7 +1,9 @@
 import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
-import { HiOutlineSearch, BiUser, BsCart3, VscHeart, GiHamburgerMenu } from "../../utils/icons";
+import { AprizeLogo } from "../Aprize-logo/AprizeLogo";
+import { HiOutlineSearch, BiUser, BsCart3, VscHeart, GiHamburgerMenu, VscChromeClose } from "../../utils/icons";
+import { useHeaderIcons } from "../../contexts/headerIcons-context";
 import { useCart } from "../../contexts/cart-context";
 import { useWishlist } from "../../contexts/wishlist-context";
 
@@ -9,32 +11,64 @@ const Header = () => {
 
     const { stateOfCart } = useCart();
     const { stateOfWishlist } = useWishlist();
+    const { popUpSearchBarDisplay, setPopUpSearchBarDisplay, popUpSearchBarInput, setPopUpSearchBarInput, hamburgerMenuList, popUpHamburgerMenuDisplay, setPopUpHamburgerMenuDisplay } = useHeaderIcons();
 
     return (
         <div>
 
             <header className="ap_header">
 
-                <div className="ap_header-content-container">
-
-                    <div className="ap_hamburgerAndLogo-container">
-                        <div className="ap_header-hamburger-icon">
-                            <GiHamburgerMenu className="ap_header-icon" />
+                <div className="ap_header-popUp-serchBar-container" style={{ display: popUpSearchBarDisplay }}>
+                    <div className="ap_popUp-searchBar-container">
+                        <div className="ap_popUp-searchBar-subcontainer1">
+                            <VscChromeClose className="ap_close-popUp-searchBar popUp-searchBar-icon" onClick={() => setPopUpSearchBarDisplay("none")} />
+                            <input placeholder="Search" value={popUpSearchBarInput} onChange={(e) => setPopUpSearchBarInput(e.target.value)} />
                         </div>
+                        <VscChromeClose className="ap_reset-popUp-searchBar-input popUp-searchBar-icon" onClick={() => setPopUpSearchBarInput("")} />
+                    </div>
+                </div>
 
-                        <div className="ap_header-logo">
-                            <Link to="/" className="ap_logo-container" >
-                                <div className="ap_logo" >
-                                    <div className="ap_logo-subcontainer1">
-                                        <h4 className="ap_logo-title a-tl">APRIZE</h4>
+                <div className="ap_header-popUp-hamburger-menu-container" style={{ display: popUpHamburgerMenuDisplay }}>
+                    <div className="ap_hamburger-menu-subcontainer1">
+                        <div className="a-tr"><VscChromeClose className="ap_close-hamburger-menu" onClick={() => setPopUpHamburgerMenuDisplay("none")} /></div>
+                        <div className="ap_hamburger-menu-logo">
+                            <Link to="/" className="ap_hamburger-menu-logo-container" >
+                                <div className="ap_aprize-logo" >
+                                    <div className="ap_aprize-logo-subcontainer1">
+                                        <h4 className="ap_aprize-logo-title a-tl">APRIZE</h4>
                                     </div>
-                                    <div className="ap_logo-subcontainer2">
+                                    <div className="ap_aprize-logo-subcontainer2">
                                         <p className="a-tl">GET YOUR CHOICES</p>
                                         <p className="a-tl">AT A1 PRICE</p>
                                     </div>
                                 </div>
                             </Link>
                         </div>
+                    </div>
+                    <div className="ap_hamburger-menu-subcontainer2">
+                        {
+                            hamburgerMenuList.map((page, index) => {
+                                return (
+                                    <div key={index} className="a-tl">
+                                        <Link to={page.pageLink} className="ap_hamburger-menu-page">
+                                            <span className="ap_hamburger-menu-page-icon">{page.pageIcon}</span>
+                                            <span>{page.pageName}</span>
+                                        </Link>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+
+                <div className="ap_header-content-container">
+
+                    <div className="ap_hamburgerAndLogo-container">
+                        <div className="ap_header-hamburger-icon">
+                            <GiHamburgerMenu className="ap_header-icon" onClick={() => setPopUpHamburgerMenuDisplay("block")} />
+                        </div>
+
+                        <AprizeLogo />
                     </div>
 
                     <div className="ap_header-rounded-searchBar-with-icon-container">
@@ -45,7 +79,7 @@ const Header = () => {
                     </div>
 
                     <div className="ap_header-iconsAndBtns">
-                        <div className="ap_header-icon search-icon"><HiOutlineSearch /></div>
+                        <div className="ap_header-icon search-icon"><HiOutlineSearch onClick={() => setPopUpSearchBarDisplay("block")} /></div>
                         <div className="ap_header-user-icon">
                             <div className="ap_header-icon"><BiUser /></div>
                             <div className="ap_user-private-pages b-rad1">
