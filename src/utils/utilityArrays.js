@@ -24,6 +24,10 @@ const categoryTypeArr = [
         img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1650191357/category-type/ct6.jpg"
     },
     {
+        category: "Western",
+        img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1651377719/category-type/ct6.5.jpg"
+    },
+    {
         category: "Shoes",
         img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1650191410/category-type/ct7.jpg"
     },
@@ -48,8 +52,16 @@ const categoryTypeArr = [
         img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1650191661/category-type/ct12.jpg"
     },
     {
+        category: "Sunglasses",
+        img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1651378589/category-type/ct12.5.jpg"
+    },
+    {
         category: "Winter",
         img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1650191703/category-type/ct13.jpg"
+    },
+    {
+        category: "Free Style",
+        img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1651378364/category-type/ct13.5.jpg"
     },
     {
         category: "Kitchen utensils",
@@ -228,7 +240,7 @@ const gridTemplatesArr = [
     },
     {
         templateImg: "https://tinyurl.com/5n7mujan",
-        templateName: "Baggy Style"
+        templateName: "Free Style"
     },
     {
         templateImg: "https://tinyurl.com/3s5e3v6m",

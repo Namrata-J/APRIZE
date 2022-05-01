@@ -48,7 +48,7 @@ const GridTemplate = () => {
                     }
                     if (index === 8) {
                         return (
-                            <div className="ap_template-type template-type5">
+                            <div className="ap_template-type template-type5" key={index}>
                                 <img src={eachTemplate.templateImg} />
                                 <div className="ap_grid-template-overlay">
                                     <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>

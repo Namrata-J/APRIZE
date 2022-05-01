@@ -1,8 +1,30 @@
 import "./vedioCarousel.css";
 import { Carousel } from "./Carousel";
 import { firstVedioCarouselData } from "../../utils/utilityArrays";
+import { useNavigate } from "react-router-dom";
+import { useFilterData } from "../../contexts/filterData-context";
 
 const FirstVedioCarousel = () => {
+
+    const navigate = useNavigate();
+    const { dispatchOfProductsBeingShown } = useFilterData();
+
+    const handleFirstVedioCarouselClick = (eachVedioData) => {
+        dispatchOfProductsBeingShown({ type: "clear" });
+
+        if(eachVedioData.hasOwnProperty('category')){
+            dispatchOfProductsBeingShown({ type: "filterBySection", payload: eachVedioData.category })
+        }else
+            if(eachVedioData.hasOwnProperty('hasDiscount')){
+                dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "hasDiscount" })
+            }else
+                if(eachVedioData.hasOwnProperty('onSale')){
+                    dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isInSale" })
+                }
+
+        navigate("/Productlisting")
+    }
+
     return (
         <div className="ap_first-vedio-carousel" >
             <Carousel >
@@ -13,7 +35,7 @@ const FirstVedioCarousel = () => {
                                 <video src={ eachVedioData.carouselVedio } autoPlay loop muted />
                                 <div className="ap_overlay-container">
                                     <p className="ap_overlay-container-text">{ eachVedioData.overlayText }</p>
-                                    <button class="et_so-btn primary-color btn ap_overlay-container-btn">Shop Now</button>
+                                    <button className="et_so-btn primary-color btn ap_overlay-container-btn" onClick={() => handleFirstVedioCarouselClick(eachVedioData)}>Shop Now</button>
                                 </div>
                             </div>
                         )
