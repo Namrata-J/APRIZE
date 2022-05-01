@@ -20,60 +20,37 @@ const GridTemplate = () => {
         navigate("/Productlisting")
     }
 
+    const getTheGridTemplateClass = (index) => {
+       if(index === 0){
+           return "ap_template-type template-type1"
+       }else
+           if(index === 1 || index === 2){
+               return "ap_template-type template-type2"
+           }else
+               if(index === 3 || index === 4 || index === 5){
+                   return "ap_template-type template-type3"
+               }else
+                   if(index === 6){
+                       return "ap_template-type template-type4"
+                   }else
+                       if(index === 7){
+                           return "ap_template-type template-type5"
+                       }else
+                           return "ap_template-type template-type6"
+    }
+
     return (
         <div className="ap_grid-template">
             {
                 gridTemplatesArr.map((eachTemplate, index) => {
-                    if (index === 0) {
-                        return (
-                            <div className="ap_template-type template-type1" key={index} onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
-                                <img src={eachTemplate.templateImg} />
-                                <div className="ap_grid-template-overlay">
-                                    <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>
-                                </div>
+                    return (
+                        <div className={getTheGridTemplateClass(index)} key={ index } onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
+                            <img src={eachTemplate.templateImg} />
+                            <div className="ap_grid-template-overlay">
+                                 <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>
                             </div>
-                        )
-                    }
-                    if (index === 1 || index === 2) {
-                        return (
-                            <div className="ap_template-type template-type2" key={index} onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
-                                <img src={eachTemplate.templateImg} />
-                                <div className="ap_grid-template-overlay">
-                                    <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>
-                                </div>
-                            </div>
-                        )
-                    }
-                    if (index === 3 || index === 4 || index === 5) {
-                        return (
-                            <div className="ap_template-type template-type3" key={index} onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
-                                <img src={eachTemplate.templateImg} />
-                                <div className="ap_grid-template-overlay">
-                                    <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>
-                                </div>
-                            </div>
-                        )
-                    }
-                    if (index === 6 || index === 7) {
-                        return (
-                            <div className="ap_template-type template-type4" key={index} onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
-                                <img src={eachTemplate.templateImg} />
-                                <div className="ap_grid-template-overlay">
-                                    <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>
-                                </div>
-                            </div>
-                        )
-                    }
-                    if (index === 8) {
-                        return (
-                            <div className="ap_template-type template-type5" key={index} onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
-                                <img src={eachTemplate.templateImg} />
-                                <div className="ap_grid-template-overlay">
-                                    <p className="ap_grid-template-overlay-text">{eachTemplate.templateName}</p>
-                                </div>
-                            </div>
-                        )
-                    }
+                        </div>
+                    )
                 })
             }
         </div>

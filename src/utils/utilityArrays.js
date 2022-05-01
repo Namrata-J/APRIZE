@@ -77,7 +77,7 @@ const categoryTypeArr = [
     },
     {
         category: "Masks",
-        img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1650191935/category-type/ct17.jpg"
+        img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1651426553/category-type/ct17.5.jpg"
     },
     {
         category: "Bags",
@@ -247,8 +247,16 @@ const gridTemplatesArr = [
         templateName: "Sunglasses"
     },
     {
-        templateImg: "https://tinyurl.com/2p9dk3t8",
+        templateImg: "https://tinyurl.com/y8bwvacy",
         templateName: "Kids"
+    },
+    {
+        templateImg: "https://tinyurl.com/3acp43tx",
+        templateName: "Headphones"
+    },
+    {
+        templateImg: "https://tinyurl.com/myfzfv6h",
+        templateName: "Bags"
     }
 ];
 
