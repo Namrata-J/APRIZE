@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
 .ap_homePage-filtered-categories {
     padding: 4.5rem 1rem 1rem 1rem;
 }
@@ -6,19 +14,34 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    padding-top: 0.8rem;
 }
 
-.ap_scrollable-section-description {
+.scrollable-section-description {
     align-items: center;
+    color: var(--action);
     display: flex;
+    gap: 0.3rem;
     width: fit-content;
 }
 
 .ap_scrollable-section-description p {
-    color: var(--action);
-    font-family: ;
     text-align: left;
     width: 7rem;
+}
+
+.ap_homePage-filtered-categories .ap_scrollable-section-icon {
+    animation: fadeIn 1s infinite alternate;
+    font-size: 2rem;
+}
+
+.ap_homePage-filtered-categories .ap_scrollable-section-icon:hover {
+    cursor: pointer;
+    color: var(--medium-gray);
+}
+
+.ap_scrollable-section .ap_category-link {
+    position: relative;
 }
 
 .ap_category-img {
@@ -32,4 +55,50 @@
 .ap_category-img:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+.ap_scrollable-section .ap_category-name {
+    background-color: var(--most-lightest-gray);
+    color: var(--action);
+    font-size: 0.7rem;
+    padding: 0rem 0.8rem;
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+}
+
+.ap_category-link:hover .ap_category-name {
+    bottom: 45%;
+    transition: 1s;
+}
+
+@media only screen and (max-width: 560px) {
+    .ap_scrollable-section-description {
+        gap: 0rem;
+    }
+
+    .ap_scrollable-section-description p {
+        width: 6rem;
+        font-size: 0.8rem;
+    }
+
+    .ap_category-img {
+        height: 3.5rem;
+        margin: 0rem 0.5rem;
+        width: 3.5rem;
+    }
+
+    .ap_scrollable-section .ap_category-name {
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 495px) {
+    .ap_homePage-filtered-categories {
+        padding: 3.7rem 1rem 0.5rem 1rem;
+    }
+
+    .ap_homePage-filtered-categories .ap_scrollable-section-icon {
+        font-size: 1.3rem;
+    }
 }

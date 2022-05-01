@@ -17,5 +17,10 @@ import { LogInCard } from "./LogIn-card/LogInCard";
 import { LogOutCard } from "./LogOut-card/LogOutCard";
 import { SignUpCard } from "./SignUp-card/SignUpCard";
 import { AprizeLogo } from "./Aprize-logo/AprizeLogo";
+import { CombinedProvider } from "./Combined-providers/CombinedProviders";
+import { FirstVedioCarousel } from "./Carousel/FirstVedioCarousel" ;
+import { MainVedio } from "./Carousel/MainVedio";
+import { Carousel } from "./Carousel/Carousel";
+import { GridTemplate } from "./Grid-template/GridTemplate";
 
-export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo };
+export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, Product, ProductCard, FloatingBtn, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo, CombinedProvider, FirstVedioCarousel, MainVedio, Carousel, GridTemplate };

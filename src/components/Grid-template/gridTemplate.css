@@ -1,0 +1,314 @@
+.ap_grid-template {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(30, 40px);
+    padding: 1rem;
+    padding-top: 0rem;
+    width: 100%;
+}
+
+.ap_grid-template .template-type1 {
+    grid-column: span 20;
+    grid-row: span 12;
+}
+
+.ap_grid-template .template-type2 {
+    grid-column: span 4;
+    grid-row: span 6;
+}
+
+.ap_grid-template .template-type3 {
+    grid-column: span 4;
+    grid-row: span 4;
+}
+
+.ap_grid-template .template-type4 {
+    grid-column: span 12;
+    grid-row: span 14;
+}
+
+.ap_grid-template .template-type5 {
+    grid-column: span 12;
+    grid-row: span 4;
+}
+
+.ap_template-type {
+    box-shadow: 0px 0px 2px 0px var(--medium-gray);
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.ap_template-type img {
+    height: 100%;
+    width: 100%;
+}
+
+.ap_template-type img:hover {
+    box-shadow: 0px 0px 10px 0px var(--medium-gray);
+}
+
+.ap_grid-template-overlay {
+    background: rgba(238, 241, 243, 0.7);
+    bottom: 30%;
+    position: absolute;
+    width: 100%;
+}
+
+.ap_grid-template-overlay-text {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    padding: 0.2rem 0rem;
+}
+
+@media only screen and (max-width: 1285px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(27, 40px);
+    }
+
+    .ap_grid-template .template-type1{
+        grid-column: span 18;
+
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-column: span 6;
+    }
+
+    .ap_grid-template .template-type3 {
+        grid-row: span 3;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 12;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: span 3;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(21, 40px);
+    }
+
+    .ap_grid-template .template-type1{
+        grid-column: span 19;
+        grid-row: span 8;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-column: span 5;
+        grid-row: span 4;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 10;
+    }
+}
+
+@media only screen and (max-width: 1005px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(24, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-column: span 14;
+        grid-row: span 8;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-column: 15/25;
+        grid-row: 5/9;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 13;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(21, 20px);
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 10;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(23, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: 5/8;
+    }
+
+    .ap_grid-template .template-type3 {
+        grid-column: span 8;
+        grid-row: span 5;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(21, 20px);
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 9;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .ap_grid-template {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: repeat(36, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-column: span 18;
+        grid-row: span 8;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-column: span 9;
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type3 {
+        grid-column: span 6;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-column: span 9;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-column: 1/19;
+        grid-row: 9/14;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(29, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type3 {
+        grid-row: span 4;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: 8/12;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(35, 20px);
+        gap: 0.5rem;
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 8;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: 10/15;
+    }
+
+    .ap_grid-template-overlay-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(30, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 8;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: 9/13;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(26, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 6;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 6;
+    }
+
+    .ap_grid-template .template-type4 {
+        grid-row: span 6;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: 7/11;
+    }
+
+    .ap_grid-template-overlay-text {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(24, 20px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 5;
+    }
+
+    .ap_grid-template .template-type3 {
+        grid-row: span 3;
+    }
+
+    .ap_grid-template .template-type5 {
+        grid-row: 6/10;
+    }
+}

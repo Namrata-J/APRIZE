@@ -15,11 +15,18 @@
 }
 
 .ap_productOnSale-img:hover {
-    box-shadow: 0px 0px 5px 2px var(--black);
+    box-shadow: 0px 0px 5px 2px var(--medium-gray);
+}
+
+@media only screen and (max-width: 670px) {
+    .ap_productOnSale-img {
+        height: 10rem;
+    }
 }
 
 @media only screen and (max-width: 560px) {
     .ap_productOnSale-img {
-        height: 10rem;
+        height: 7rem;
+        margin: 0.5rem;
     }
 }
