@@ -1,9 +1,9 @@
-import "./product.css";
+import "./productsSection.css";
 import { ProductCard } from "../Product-card/ProductCard";
 import { useFilterData } from "../../contexts/filterData-context"; 
 import { FloatingBtn } from "../Floating-Btn/FloatingBtn";
 
-const Product = () => {
+const ProductsSection = () => {
 
     const { filteredProductList } = useFilterData();
 
@@ -21,4 +21,4 @@ const Product = () => {
     );
 }
 
-export { Product };
+export { ProductsSection };
