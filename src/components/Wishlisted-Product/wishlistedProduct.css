@@ -12,6 +12,68 @@
     padding: 1rem 4rem;
 }
 
+.card-w-badge {
+    box-shadow: 0px 0px 5px 1px var(--action);
+    font-size: small;
+    height: 20rem;
+    width: 15rem;
+}
+
+.card-w-badge i {
+    cursor: pointer;
+}
+
+.card-w-badge-subcontainer1 {
+    height: 70%;
+}
+
+.card-w-badge-subcontainer2 {
+    gap: 1rem;
+    padding-bottom: 0;
+}
+
+.card-product-price {
+    width: 25%;
+}
+
+.ap_card-pp {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-w-badge-subcontainer3 {
+    height: 30%;
+}
+
+.card-w-badge-subcontainer3 button {
+    font-size: small;
+    margin: 0.1rem;
+}
+
+.card-w-badge-subcontainer3 .et_p-simple-btn {
+    color: var(--white-color);
+}
+
+.card-w-badge-subcontainer3 .et_so-btn:hover {
+    color: var(--white-color);
+}
+
+.card-w-badge-type2 {
+    z-index: 0;
+}
+
+.card-w-badge-type2::before {
+    top: 28px;
+}
+
+.card-w-badge-type3 {
+    z-index: 0;
+}
+
+.badge-type3 {
+    width: 17.4rem;
+}
+
 .ap_wishlisted-product-icon {
     color: var(--light-red);
 }

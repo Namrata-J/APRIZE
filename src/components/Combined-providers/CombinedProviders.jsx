@@ -4,6 +4,7 @@ import { FilterDataProvider } from "../../contexts/filterData-context";
 import { WishlistProvider } from "../../contexts/wishlist-context";
 import { CartProvider } from "../../contexts/cart-context";
 import { HeaderIconsProvider } from "../../contexts/headerIcons-context";
+import { ProductsGridClassProvider } from "../../contexts/productsGridClass-context";
 
 const CombinedProvider = ({ children }) => {
     return (
@@ -12,7 +13,9 @@ const CombinedProvider = ({ children }) => {
                 <WishlistProvider>
                     <HeaderIconsProvider>
                         <CartProvider>
-                            { children }
+                            <ProductsGridClassProvider>
+                                {children}
+                            </ProductsGridClassProvider>
                         </CartProvider>
                     </HeaderIconsProvider>
                 </WishlistProvider>

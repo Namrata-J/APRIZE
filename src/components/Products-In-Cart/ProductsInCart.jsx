@@ -28,7 +28,7 @@ const ProductsInCart = () => {
                                     <div className="ap_myCart-product" key={ index }>
                                         <div className="ap_myCart-product-container1">
                                             <div className="ap_myCart-product-subContainer11">
-                                                <img src={ cartProduct.img } alt="product image" />
+                                                <img src={ cartProduct.img[0] } alt="product image" />
                                             </div>
                                             <div className="ap_myCart-product-subContainer12">
                                                 <div className="ap_myCart-product-brandName fw-4 a-tl">{ cartProduct.brandName }</div>
