@@ -9,7 +9,7 @@
 
 .ap_new-arrival-img:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 5px 2px var(--black);
+    box-shadow: 0px 0px 5px 2px var(--medium-gray);
 }
 
 .ap_newArrivals-scrollable-section {
@@ -18,8 +18,50 @@
     overflow-x: scroll;
 }
 
-@media only screen and (max-width: 560px) {
+.ap_products-scrollable-section-description p {
+    font-size: 1.1rem;
+    text-align: left;
+    width: 10rem;
+}
+
+.ap_products-scrollable-section-icon {
+    animation: fadeIn 1s infinite alternate;
+    font-size: 3rem;
+}
+
+.ap_products-scrollable-section-icon:hover {
+    cursor: pointer;
+    color: var(--medium-gray);
+}
+
+@media only screen and (max-width: 670px) {
     .ap_new-arrival-img {
         height: 10rem;
+    }
+
+    .ap_products-scrollable-section-description p {
+        font-size: 1rem;
+        width: 8rem;
+    }
+
+    .ap_products-scrollable-section-icon {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .ap_new-arrival-img {
+        height: 7rem;
+        margin: 0.5rem;
+    }
+
+    .ap_products-scrollable-section-description p {
+        font-size: 0.9rem;
+        width: 7rem;
+    }
+
+    .ap_products-scrollable-section-icon {
+        font-size: 1.5rem;
+        margin-left: 0.3rem;
     }
 }

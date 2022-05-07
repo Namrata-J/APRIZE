@@ -1,5 +1,5 @@
 import "./wishlistedProduct.css";
-import { FaRegHeart } from 'react-icons/fa';
+import { FaRegHeart } from "../../utils/icons";
 import { Link } from "react-router-dom";
 import { getProductClass, getOriginalPrice } from "../../utils/productutilFuncs";
 import { useWishlist } from "../../contexts/wishlist-context";
@@ -30,7 +30,7 @@ const WishlistProduct = () => {
                                     {!wishlistedProduct.isInStock ? <div className="badge-type3">Stock Out</div> : ""}
                                     <i className="ap_wishlisted-product-icon"><FaRegHeart /></i>
 
-                                    <div className="card-w-badge-subcontainer1" style= {{ backgroundImage: `url(${ wishlistedProduct.img })`}}>
+                                    <div className="card-w-badge-subcontainer1" style= {{ backgroundImage: `url(${ wishlistedProduct.img[0]})`, backgroundPosition: "center" }}>
                                     </div>
                                     <div className="card-w-badge-subcontainer2">
                                         <div className="product-description">

@@ -1,11 +1,11 @@
 .ap_productListing-page-sideBar {
     background-color: var(--white-color);
-    border: 1px solid var(--lightest-gray);
+    border-right: 1px solid rgb(211, 233, 253);
     display: flex;
     justify-content: flex-start;
     padding: 4rem 1rem 1rem 1rem;
     width: 230px;   
-    height: 40rem;
+    height: 90vh;
     overflow-y: scroll;
 }
 
@@ -50,7 +50,7 @@
     margin: 0;
 }
 
-@media only screen and (max-width: 772px) {
+@media only screen and (max-width: 1150px) {
     .ap_productListing-page-sideBar {
         display: none;
     }

@@ -1,0 +1,44 @@
+.ap_carousel-container {
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+    background: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    width: 45px;
+    z-index: 1;
+}
+
+.slick-arrow.slick-prev {
+    left: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.slick-arrow.slick-next {
+    right: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 670px) {
+    .slick-arrow.slick-prev,
+    .slick-arrow.slick-next {
+        height: 80px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .slick-arrow.slick-prev,
+    .slick-arrow.slick-next {
+        height: 50px;
+        width: 30px;
+    }
+}

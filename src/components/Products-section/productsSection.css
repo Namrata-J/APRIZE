@@ -1,21 +1,22 @@
+.ap_main-products-section {
+    height: 90vh;
+    width: 100%;
+}
+
 .ap_productListing-page-products-section {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 40rem;
+    height: 85vh;
     overflow-y: scroll;
 }
 
 .ap_product-listing {
-    margin: 1rem 0rem;
-    margin-bottom: 0rem;
+    margin: 0rem;
+    margin-top: 2rem;
     width: 95%;
 }
 
 .ap_all-product-listing {
     font-size: 0.9rem;
-}
-
-.ap_showProducts-count-heading {
-    position: relative;
 }
