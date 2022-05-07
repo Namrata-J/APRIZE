@@ -21,29 +21,20 @@ const GridTemplate = () => {
     }
 
     const getTheGridTemplateClass = (index) => {
-       if(index === 0){
-           return "ap_template-type template-type1"
-       }else
-           if(index === 1 || index === 2){
-               return "ap_template-type template-type2"
-           }else
-               if(index === 3 || index === 4 || index === 5){
-                   return "ap_template-type template-type3"
-               }else
-                   if(index === 6){
-                       return "ap_template-type template-type4"
-                   }else
-                       if(index === 7){
-                           return "ap_template-type template-type5"
-                       }else
-                           return "ap_template-type template-type6"
+        switch(index){
+            case 0: return "ap_template-type template-type1"
+            case 1 || 2: return "ap_template-type template-type2"
+            case 3 || 4 || 5: return "ap_template-type template-type3"
+            case 6: return "ap_template-type template-type4"
+            case 7: return "ap_template-type template-type5"
+            default: return "ap_template-type template-type6"
+        }
     }
 
     return (
         <div className="ap_grid-template">
             {
-                gridTemplatesArr.map((eachTemplate, index) => {
-                    return (
+                gridTemplatesArr.map((eachTemplate, index) => (
                         <div className={getTheGridTemplateClass(index)} key={ index } onClick={() => gridTemplateClickHandler(eachTemplate, index)}>
                             <img src={eachTemplate.templateImg} />
                             <div className="ap_grid-template-overlay">
@@ -51,7 +42,7 @@ const GridTemplate = () => {
                             </div>
                         </div>
                     )
-                })
+                )
             }
         </div>
     );

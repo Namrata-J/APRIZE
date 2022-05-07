@@ -12,13 +12,12 @@ const DiscountedProducts = () => {
                     <MdOutlineDoubleArrow className="ap_products-scrollable-section-icon" />
                 </div>
                 {
-                    discountedProductsArr.map((discountedProducts, index) => {
-                        return (
+                    discountedProductsArr.map((discountedProducts, index) => (
                             <Link to="/Productlisting" key={index} state={discountedProducts}>
                                 <img src={discountedProducts.img} alt="discounted Product" className="ap_discountedProduct-img" />
                             </Link>
                         )
-                    })
+                    )
                 }
             </div>
         </div>

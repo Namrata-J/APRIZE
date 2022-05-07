@@ -12,13 +12,13 @@ const FirstVedioCarousel = () => {
     const handleFirstVedioCarouselClick = (eachVedioData) => {
         dispatchOfProductsBeingShown({ type: "clear" });
 
-        if(eachVedioData.hasOwnProperty('category')){
+        if(eachVedioData.category){
             dispatchOfProductsBeingShown({ type: "filterBySection", payload: eachVedioData.category })
         }else
-            if(eachVedioData.hasOwnProperty('hasDiscount')){
+            if(eachVedioData.hasDiscount){
                 dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "hasDiscount" })
             }else
-                if(eachVedioData.hasOwnProperty('onSale')){
+                if(eachVedioData.onSale){
                     dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isInSale" })
                 }
 
@@ -29,8 +29,7 @@ const FirstVedioCarousel = () => {
         <div className="ap_first-vedio-carousel" >
             <Carousel >
                 {
-                    firstVedioCarouselData.map((eachVedioData, index) => {
-                        return (
+                    firstVedioCarouselData.map((eachVedioData, index) => (
                             <div className="ap_first-carousel-vedio-data" key={ index }>
                                 <video src={ eachVedioData.carouselVedio } autoPlay loop muted />
                                 <div className="ap_overlay-container">
@@ -39,7 +38,7 @@ const FirstVedioCarousel = () => {
                                 </div>
                             </div>
                         )
-                    })
+                    )
                 }
             </Carousel>
         </div>
