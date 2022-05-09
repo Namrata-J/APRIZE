@@ -23,8 +23,11 @@ const GridTemplate = () => {
     const getTheGridTemplateClass = (index) => {
         switch(index){
             case 0: return "ap_template-type template-type1"
-            case 1 || 2: return "ap_template-type template-type2"
-            case 3 || 4 || 5: return "ap_template-type template-type3"
+            case 1:
+            case 2: return "ap_template-type template-type2"
+            case 3:
+            case 4:
+            case 5: return "ap_template-type template-type3"
             case 6: return "ap_template-type template-type4"
             case 7: return "ap_template-type template-type5"
             default: return "ap_template-type template-type6"
