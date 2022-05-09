@@ -1,4 +1,4 @@
-import "./productCard.css";
+import "./productCardListing.css";
 import { VscHeart } from "../../utils/icons";
 import { useFilterData } from "../../contexts/filterData-context";
 import { useLocation } from "react-router-dom";
@@ -8,7 +8,7 @@ import { useWishlist } from "../../contexts/wishlist-context";
 import { useCart } from "../../contexts/cart-context";
 import { useProductsGridClass } from "../../contexts/productsGridClass-context";
 
-const ProductCard = () => {
+const ProductCardListing = () => {
 
     const location = useLocation();
 
@@ -115,4 +115,4 @@ const ProductCard = () => {
     );
 }
 
-export { ProductCard, getProductClass, getOriginalPrice };
+export { ProductCardListing, getProductClass, getOriginalPrice };

@@ -8,7 +8,7 @@ import { ProductsOnSale } from "./Products-on-sale/ProductsOnSale";
 import { Footer } from "./Footer/Footer";
 import { SideBar } from "./Side-bar/SideBar";
 import { ProductsSection } from "./Products-section/ProductsSection";
-import { ProductCard } from "./Product-card/ProductCard";
+import { ProductCardListing } from "./Product-card-listing/ProductCardListing";
 import { PopUpFiltersContainer } from "./PopUp-filters/PopUpFilters";
 import { FilterableForm } from "./Filterable-Form/FilterableForm";
 import { WishlistProduct } from "./Wishlisted-Product/WishlistedProducts";
@@ -22,5 +22,6 @@ import { FirstVedioCarousel } from "./Carousel/FirstVedioCarousel" ;
 import { MainVedio } from "./Carousel/MainVedio";
 import { Carousel } from "./Carousel/Carousel";
 import { GridTemplate } from "./Grid-template/GridTemplate";
+import { SingleProductDetails } from "./Single-product-detail/SingleProductDetails";
 
-export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, ProductsSection, ProductCard, PopUpFiltersContainer, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo, CombinedProvider, FirstVedioCarousel, MainVedio, Carousel, GridTemplate };
+export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, ProductsSection, ProductCardListing, PopUpFiltersContainer, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo, CombinedProvider, FirstVedioCarousel, MainVedio, Carousel, GridTemplate, SingleProductDetails };
