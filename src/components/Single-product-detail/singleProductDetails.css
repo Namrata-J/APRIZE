@@ -94,7 +94,6 @@
 }
 
 .ap_singleProduct-action-btns button {
-    /* background-color: transparent; */
     border: 1px solid var(--action);
     cursor: pointer;
     color: var(--action);
@@ -107,4 +106,122 @@
 
 .ap_singleProduct-action-btns button:disabled {
     cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1300px) {
+    .ap_singleProduct-carousel-container {
+        width: 60%;
+    }
+
+    .ap_singleProduct-details-container {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .ap_singleProduct-carousel-container {
+        width: 70%;
+    }
+
+    .ap_singleProduct-details-container {
+        width: 30%;
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .ap_singleProduct-action-btns {
+        flex-direction: column;
+    }
+
+    .ap_singleProduct-action-btns button {
+        padding: 0.7rem 0.3rem;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .ap_singleProduct-carousel-container {
+        width: 50%;
+    }
+
+    .ap_singleProduct-details-container {
+        width: 50%;
+        padding-left: 4rem;
+    }
+
+    .ap_single-product-img {
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .ap_singleProduct-carousel-container {
+        width: 60%;
+    }
+
+    .ap_single-product-img {
+        height: 87vh;
+    }
+
+    .ap_singleProduct-details-container {
+        width: 50%;
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .ap_single-product-container {
+        flex-direction: column;
+    }
+
+    .ap_singleProduct-carousel-container {
+        width: 100%;
+    }
+
+    .ap_singleProduct-details-container {
+        width: 100%;
+        padding-left: 4rem;
+        padding-top: 0rem;
+    }
+
+    .ap_singleProduct-action-btns {
+        flex-direction: row;
+    }
+
+    .ap_singleProduct-action-btns button {
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .ap_single-product-img {
+        height: 75vh;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .ap_single-product-img {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ap_single-product-container {
+        padding: 0rem;
+    }
+
+    .ap_single-product-img  {
+        border-radius: 1rem;
+    }
+}
+
+@media only screen and (max-width: 455px) {
+    .ap_singleProduct-carousel-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    .ap_single-product-img {
+        height: 63vh;
+    }
 }
