@@ -8,7 +8,7 @@ const RoutesComponent = () => {
         <Routes>
             <Route path ="/" element= {<HomePage />} />
             <Route path ="/Productlisting" element= {<ProductListingPage />} />
-            <Route path ="/ProductDetails" element={<ProductDetailPage />} />
+            <Route path ="/ProductDetails/:productId" element={<ProductDetailPage />} />
             <Route path ="/Wishlist" element= {<WishlistPage />} />
             <Route path ="/Cart" element= {<CartPage />} />
             <Route path ="/LogIn" element= {<LogInPage />} />

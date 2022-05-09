@@ -3,6 +3,7 @@ import { VscHeart } from "../../utils/icons";
 import { useCart } from "../../contexts/cart-context";
 import { useWishlist } from "../../contexts/wishlist-context";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = (product) => {
 
@@ -10,8 +11,10 @@ const ProductCard = (product) => {
 
     const { stateOfCart, dispatchOfCart } = useCart();
 
+    const navigate = useNavigate();
+
     return (
-        <div className="ap_product-card">
+        <div className="ap_product-card" onClick={() => navigate(`/ProductDetails/${product._id}`)} >
             <VscHeart
                 className="ap_product-wishlist-icon"
                 onClick={() => dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })}
