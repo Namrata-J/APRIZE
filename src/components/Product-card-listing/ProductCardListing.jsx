@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import "./productCardListing.css";
+import { ProductCard } from "../";
 import { useLocation } from "react-router-dom";
-import { ProductCard } from "../Product-card/ProductCard";
-import { useFilterData } from "../../contexts/filterData-context";
-import { useProductsGridClass } from "../../contexts/productsGridClass-context";
+import { useFilterData, useProductsGridClass } from "../../contexts";
 
 const ProductCardListing = () => {
 

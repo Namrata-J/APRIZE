@@ -1,8 +1,8 @@
 import React from "react";
 import "./categoryType.css";
 import { Link } from "react-router-dom";
-import { categoryTypeArr } from "../../utils/utilityArrays";
 import { MdOutlineDoubleArrow } from "../../utils/icons";
+import { categoryTypeArr } from "../../utils/utilityArrays";
 
 const CategoryType = () => {
 

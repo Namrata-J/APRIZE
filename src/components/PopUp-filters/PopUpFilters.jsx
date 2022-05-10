@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./popUpFilters.css";
+import { FilterableForm } from "../";
 import { BsViewStacked, BsGrid3X2, VscChromeClose } from "../../utils/icons";
-import { FilterableForm } from "../Filterable-Form/FilterableForm";
-import { useProductsGridClass } from "../../contexts/productsGridClass-context";
+import { useProductsGridClass } from "../../contexts";
 
 const PopUpFiltersContainer = () => {
 

@@ -1,11 +1,9 @@
 import React from "react";
+import { Carousel } from "../";
 import "./singleProductDetails.css";
 import { useParams } from "react-router-dom";
-import { Carousel } from "../Carousel/Carousel";
-import { useCart } from "../../contexts/cart-context";
-import { useWishlist } from "../../contexts/wishlist-context";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
-import { useProductsDetail } from "../../contexts/productsDetail-context";
+import { useCart, useProductsDetail, useWishlist } from "../../contexts";
 
 const SingleProductDetails = () => {
 

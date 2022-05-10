@@ -1,7 +1,7 @@
-import { discountedProductsArr } from "../../utils/utilityArrays";
 import "./discountedProducts.css";
 import { Link } from "react-router-dom";
 import { MdOutlineDoubleArrow } from "../../utils/icons";
+import { discountedProductsArr } from "../../utils/utilityArrays";
 
 const DiscountedProducts = () => {
     return (

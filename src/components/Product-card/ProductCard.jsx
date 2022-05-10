@@ -1,9 +1,8 @@
 import React from "react";
 import { VscHeart } from "../../utils/icons";
-import { useCart } from "../../contexts/cart-context";
-import { useWishlist } from "../../contexts/wishlist-context";
-import { getOriginalPrice } from "../../utils/productutilFuncs";
 import { useNavigate } from "react-router-dom";
+import { useCart, useWishlist } from "../../contexts";
+import { getOriginalPrice } from "../../utils/productutilFuncs";
 
 const ProductCard = (product) => {
 

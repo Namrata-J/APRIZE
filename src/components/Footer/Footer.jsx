@@ -1,6 +1,6 @@
 import "./footer.css";
 import { Link } from "react-router-dom";
-import { useFilterData } from "../../contexts/filterData-context";
+import { useFilterData } from "../../contexts";
 
 const Footer = () => {
 

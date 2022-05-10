@@ -1,7 +1,6 @@
 import "./productsSection.css";
-import { ProductCardListing } from "../Product-card-listing/ProductCardListing";
-import { useFilterData } from "../../contexts/filterData-context";
-import { PopUpFiltersContainer } from "../PopUp-filters/PopUpFilters";
+import { ProductCardListing, PopUpFiltersContainer } from "../";
+import { useFilterData } from "../../contexts";
 
 const ProductsSection = () => {
 

@@ -1,7 +1,7 @@
-import { productsOnSaleArr } from "../../utils/utilityArrays";
 import "./productsOnSale.css";
 import { Link } from "react-router-dom";
 import { MdOutlineDoubleArrow } from "../../utils/icons";
+import { productsOnSaleArr } from "../../utils/utilityArrays";
 
 const ProductsOnSale = () => {
     return (

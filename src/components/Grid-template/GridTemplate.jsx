@@ -1,7 +1,7 @@
 import "./gridTemplate.css";
-import { gridTemplatesArr } from "../../utils/utilityArrays";
-import { useFilterData } from "../../contexts/filterData-context";
+import { useFilterData } from "../../contexts";
 import { useNavigate } from "react-router-dom";
+import { gridTemplatesArr } from "../../utils/utilityArrays";
 
 const GridTemplate = () => {
 

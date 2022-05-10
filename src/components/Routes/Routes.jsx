@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { HomePage, ProductListingPage, ProductDetailPage, WishlistPage, CartPage, LogInPage, LogOutPage, SignUpPage } from "../../pages/index";
+import { HomePage, ProductListingPage, ProductDetailPage, WishlistPage, CartPage, LogInPage, LogOutPage, SignUpPage } from "../../pages";
 
 const RoutesComponent = () => {
     return (

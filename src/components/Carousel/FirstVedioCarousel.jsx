@@ -1,8 +1,8 @@
 import "./vedioCarousel.css";
 import { Carousel } from "./Carousel";
-import { firstVedioCarouselData } from "../../utils/utilityArrays";
 import { useNavigate } from "react-router-dom";
-import { useFilterData } from "../../contexts/filterData-context";
+import { useFilterData } from "../../contexts";
+import { firstVedioCarouselData } from "../../utils/utilityArrays";
 
 const FirstVedioCarousel = () => {
 
