@@ -35,9 +35,9 @@ const SingleProductDetails = () => {
                 <div className="ap_singleProduct-details-container a-tl">
                     <h3 className="ap_singleProduct-title">{ singleProduct.brandName }</h3>
                     <p className="ap_singleProduct-description">{ singleProduct.description }</p>
-                    { singleProduct.isNewArrival? <div className="ap_singleProduct-is-newArrival">New Arrival</div> : "" }
-                    { singleProduct.isTrending? <div className="ap_singleProduct-is-trending">Trending</div> : "" }
-                    { !singleProduct.isInStock? <div className="ap_singleProduct-is-stockOut">Stock Out</div> : "" }
+                    { singleProduct.isNewArrival && <div className="ap_singleProduct-is-newArrival">New Arrival</div> }
+                    { singleProduct.isTrending && <div className="ap_singleProduct-is-trending">Trending</div> }
+                    { !singleProduct.isInStock && <div className="ap_singleProduct-is-stockOut">Stock Out</div> }
                     <p className="ap_singleProduct-info">Rating: <span>{ singleProduct.rating }⭐</span></p>
                     <p className="ap_singleProduct-info">Availability: <span>{ singleProduct.isInStock? "In Stock" : "Out Of Stock" }</span></p>
                     <p className="ap_singleProduct-info">Original Price: <span>₹{ getOriginalPrice(singleProduct) }</span></p>
