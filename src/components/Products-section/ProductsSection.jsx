@@ -1,7 +1,6 @@
 import "./productsSection.css";
-import { ProductCard } from "../Product-card/ProductCard";
-import { useFilterData } from "../../contexts/filterData-context";
-import { PopUpFiltersContainer } from "../PopUp-filters/PopUpFilters";
+import { ProductCardListing, PopUpFiltersContainer } from "../";
+import { useFilterData } from "../../contexts";
 
 const ProductsSection = () => {
 
@@ -16,7 +15,7 @@ const ProductsSection = () => {
                         Showing Products
                         <span className="ap_all-product-listing fw-1">(Showing {filteredProductList.length} products)</span>
                     </h4>
-                    <ProductCard />
+                    <ProductCardListing />
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
-import { newArrivalsArr } from "../../utils/utilityArrays";
 import "./newArrivalsSection.css";
 import { Link } from "react-router-dom";
+import { newArrivalsArr } from "../../utils/utilityArrays";
 import { MdOutlineDoubleArrow } from "../../utils/icons";
 
 const NewArrivalsSection = () => {

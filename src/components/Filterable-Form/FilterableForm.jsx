@@ -1,4 +1,4 @@
-import { useFilterData } from "../../contexts/filterData-context";
+import { useFilterData } from "../../contexts";
 
 const FilterableForm = () => {
 

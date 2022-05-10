@@ -1,5 +1,5 @@
 import "./sideBar.css";
-import { FilterableForm } from "../Filterable-Form/FilterableForm";
+import { FilterableForm } from "../";
 
 const SideBar = () => {
     return (

@@ -1,11 +1,9 @@
 import React from "react";
 import "./header.css";
+import { AprizeLogo } from "../";
 import { Link } from "react-router-dom";
-import { AprizeLogo } from "../Aprize-logo/AprizeLogo";
+import { useCart, useHeaderIcons, useWishlist } from "../../contexts";
 import { HiOutlineSearch, BiUser, BsCart3, VscHeart, GiHamburgerMenu, VscChromeClose } from "../../utils/icons";
-import { useHeaderIcons } from "../../contexts/headerIcons-context";
-import { useCart } from "../../contexts/cart-context";
-import { useWishlist } from "../../contexts/wishlist-context";
 
 const Header = () => {
 
