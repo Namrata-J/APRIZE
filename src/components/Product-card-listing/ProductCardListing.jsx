@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./productCardListing.css";
-import { ProductCard } from "../";
+import { ProductCard } from "../Product-card/ProductCard";
 import { useLocation } from "react-router-dom";
 import { useFilterData, useProductsGridClass } from "../../contexts";
 
