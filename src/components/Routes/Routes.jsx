@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { HomePage, ProductListingPage, ProductDetailPage, WishlistPage, CartPage, LogInPage, LogOutPage, SignUpPage } from "../../pages";
+import { HomePage, ProductListingPage, NoRouteMatchPageComp, ProductDetailPage, WishlistPage, CartPage, LogInPage, LogOutPage, SignUpPage } from "../../pages";
 
 const RoutesComponent = () => {
     return (
@@ -14,6 +14,7 @@ const RoutesComponent = () => {
             <Route path ="/LogIn" element= {<LogInPage />} />
             <Route path ="/LogOut" element= {<LogOutPage />} />
             <Route path ="/SignUp" element= {<SignUpPage />} />
+            <Route path ="*" element= {<NoRouteMatchPageComp />} />
         </Routes>
     );
 }

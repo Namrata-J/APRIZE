@@ -1,0 +1,50 @@
+@import url(../../utils/base.css);
+
+.ap_noRouteMatchPage {
+    align-items: center;
+    background-color: var(--most-lightest-gray);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.ap_noRouteMatchPage-inner-container {
+    align-items: center;
+    display: flex;
+    width: fit-content;
+}
+
+.ap_noRouteMatchPage-inner-container p {
+    color: var(--action);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 930px) {
+    .ap_noRouteMatchPage-inner-container img {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .ap_noRouteMatchPage-inner-container img {
+        width: 200px;
+    }
+
+    .ap_noRouteMatchPage-inner-container p {
+        font-size: 1.2rem;
+    }
+} 
+
+@media only screen and (max-width: 510px) {
+    .ap_noRouteMatchPage-inner-container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .ap_noRouteMatchPage-inner-container p {
+        font-size: 0.9rem;
+    }
+}
