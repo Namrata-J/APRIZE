@@ -1,6 +1,22 @@
 import "./logInCard.css";
+import { useAuth } from "../../contexts/auth-context";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const LogInCard = () => {
+
+    const { handleUserLoggedInState } = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleLoginClick = () => {
+        handleUserLoggedInState();
+        if(location.state === null){
+            console.log(location)
+            navigate("/")
+        }else
+            navigate(location?.state?.from?.pathname, { replace: true })
+    }
+
     return (
         <div className="ap_logIn-card-section auth-card-section">
             <div className="ap_logIn-card-container auth-card-container">
@@ -27,7 +43,7 @@ const LogInCard = () => {
                         </div>
 
                         <div className="ap_logIn-action-btns">
-                            <button class="et_p-simple-btn action-color btn">LogIn</button>
+                            <button className="et_p-simple-btn action-color btn" onClick={handleLoginClick}>LogIn</button>
                             <p>Create new account:)</p>
                         </div>
 

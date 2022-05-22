@@ -23,5 +23,6 @@ import { MainVedio } from "./Carousel/MainVedio";
 import { Carousel } from "./Carousel/Carousel";
 import { GridTemplate } from "./Grid-template/GridTemplate";
 import { SingleProductDetails } from "./Single-product-detail/SingleProductDetails";
+import { RequiresAuthComp } from "./RequiresAuth/RequiresAuth";
 
-export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, ProductsSection, ProductCardListing, PopUpFiltersContainer, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo, CombinedProvider, FirstVedioCarousel, MainVedio, Carousel, GridTemplate, SingleProductDetails };
+export { Header, RoutesComponent, CategoryType, ShopNowImgSection, NewArrivalsSection, DiscountedProducts, ProductsOnSale, Footer, SideBar, ProductsSection, ProductCardListing, PopUpFiltersContainer, FilterableForm, WishlistProduct, ProductsInCart, LogInCard, LogOutCard, SignUpCard, AprizeLogo, CombinedProvider, FirstVedioCarousel, MainVedio, Carousel, GridTemplate, SingleProductDetails, RequiresAuthComp };

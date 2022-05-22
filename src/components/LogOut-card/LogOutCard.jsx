@@ -1,6 +1,17 @@
 import "./logOutCard.css";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/auth-context";
 
 const LogOutCard = () => {
+
+    const { handleUserLoggedInState } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogOutClick = () => {
+        handleUserLoggedInState();
+        navigate("/")
+    }
+
     return (
         <div className="ap_logout-card-section auth-card-section">
             <div className="ap_logout-card-container auth-card-container">
@@ -28,7 +39,7 @@ const LogOutCard = () => {
                         </p>
                     </div>
                     <div className="ap_logout-btn">
-                        <button className="et_p-simple-btn action-color btn">
+                        <button className="et_p-simple-btn action-color btn" onClick={handleLogOutClick}>
                             <a href="#">Logout</a>
                         </button>
                     </div>

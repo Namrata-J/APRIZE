@@ -2,12 +2,13 @@ import React from "react";
 import "./header.css";
 import { AprizeLogo } from "../";
 import { Link } from "react-router-dom";
-import { useCart, useHeaderIcons, useWishlist } from "../../contexts";
+import { useCart, useHeaderIcons, useWishlist, useAuth } from "../../contexts";
 import { HiOutlineSearch, BiUser, BsCart3, VscHeart, GiHamburgerMenu, VscChromeClose } from "../../utils/icons";
 
 const Header = () => {
 
     const { stateOfCart } = useCart();
+    const { isUserLoggedIn } = useAuth();
     const { stateOfWishlist } = useWishlist();
     const { popUpSearchBarDisplay, setPopUpSearchBarDisplay, popUpSearchBarInput, setPopUpSearchBarInput, hamburgerMenuList, popUpHamburgerMenuDisplay, setPopUpHamburgerMenuDisplay } = useHeaderIcons();
 
@@ -81,9 +82,9 @@ const Header = () => {
                         <div className="ap_header-user-icon">
                             <div className="ap_header-icon"><BiUser /></div>
                             <div className="ap_user-private-pages b-rad1">
-                                <Link to="/LogOut"><p className="a-tl">LogOut</p></Link>
-                                <Link to="/LogIn"><p className="a-tl">LogIn</p></Link>
-                                <Link to="/SignUp"><p className="a-tl">SignUp</p></Link>
+                                { isUserLoggedIn && <Link to="/LogOut"><p className="a-tl">LogOut</p></Link>}
+                                { !isUserLoggedIn && <Link to="/LogIn"><p className="a-tl">LogIn</p></Link>}
+                                { !isUserLoggedIn && <Link to="/SignUp"><p className="a-tl">SignUp</p></Link>}
                             </div>
                         </div>
                         {

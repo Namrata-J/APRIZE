@@ -1,7 +1,7 @@
 import React from "react";
 import { VscHeart } from "../../utils/icons";
 import { useNavigate } from "react-router-dom";
-import { useCart, useWishlist } from "../../contexts";
+import { useCart, useWishlist, useAuth } from "../../contexts";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
 
 const ProductCard = (product) => {
@@ -10,13 +10,22 @@ const ProductCard = (product) => {
 
     const { stateOfCart, dispatchOfCart } = useCart();
 
+    const { isUserLoggedIn } = useAuth();
+
     const navigate = useNavigate();
 
     return (
         <div className="ap_product-card" onClick={() => navigate(`/ProductDetails/${product._id}`)} >
             <VscHeart
                 className="ap_product-wishlist-icon"
-                onClick={() => dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })}
+                onClick={
+                    (e) => {
+                        if(isUserLoggedIn)
+                        {
+                            dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })
+                            e.stopPropagation()
+                        }
+                    }}
                 style={{ color: getLikeButtonStyle(product) }} />
             <div className="ap_product-card-subcontainer1">
                 <div className="ap_product-description">
@@ -51,9 +60,19 @@ const ProductCard = (product) => {
                 </div>
                 <button
                     className="ap_product-card-action-btn b-rad3"
-                    style={stateOfCart.some(item => item._id === product._id) ? { backgroundColor: "var(--action)", color: "var(--white-color)" } : { backgroundColor: "var(--white-color)", color: "var(--action)" }}
+                    style={
+                        stateOfCart.some(item => item._id === product._id) ? 
+                        { backgroundColor: "var(--action)", color: "var(--white-color)" } : 
+                        { backgroundColor: "var(--white-color)", color: "var(--action)" }
+                    }
                     disabled={!product.isInStock}
-                    onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: product })}>
+                    onClick={
+                        (e) => {
+                            if(isUserLoggedIn){
+                                dispatchOfCart({ type: "ADD_TO_CART", payload: product })
+                                e.stopPropagation()
+                            }
+                                }}>
                     {stateOfCart.some(item => item._id === product._id) ? "Added" : "Add To Cart"}
                 </button>
             </div>
