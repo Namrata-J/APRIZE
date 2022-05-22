@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { useFilterData } from "../../contexts";
 import "./shopNowImgSection.css";
 
 const ShopNowImgSection = () => {
 
     const navigate = useNavigate();
+    const { dispatchOfProductsBeingShown } = useFilterData();
     
     return (
         <div className="ap_home-page-shopNowImg">
@@ -11,9 +13,9 @@ const ShopNowImgSection = () => {
             <div className="ap_showNowImg-overlay-container">
                <button className="et_p-simple-btn action-color btn" 
                onClick={
-                   () => {
-                       navigate("/Productlisting");
+                   () => {        
                        dispatchOfProductsBeingShown({ type: "clear" })
+                       navigate("/Productlisting")
                        }}>
                            Shop Now
                 </button>
