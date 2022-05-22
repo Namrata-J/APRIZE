@@ -14,9 +14,8 @@
     text-align: right;
 }
 
-.ap_home-page-shopNowImg .ap_showNowImg-overlay-container a {
+.ap_home-page-shopNowImg .ap_showNowImg-overlay-container button {
     color: var(--white-color);
-    text-decoration: none;
 }
 
 .ap_showNowImg-overlay-container button {
@@ -52,6 +51,7 @@
     .ap_showNowImg-overlay-container button {
         font-size: 0.8rem;
         padding: 0.6rem 0.8rem;
+        font-weight: lighter;
     }
 
     .ap_showNowImg-overlay-container p {
