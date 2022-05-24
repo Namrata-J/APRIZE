@@ -12,6 +12,9 @@ const Header = () => {
     const { stateOfWishlist } = useWishlist();
     const { popUpSearchBarDisplay, setPopUpSearchBarDisplay, popUpSearchBarInput, setPopUpSearchBarInput, hamburgerMenuList, popUpHamburgerMenuDisplay, setPopUpHamburgerMenuDisplay } = useHeaderIcons();
 
+    const filteredHamburgerMenuList = hamburgerMenuList.filter((eachPage) => isUserLoggedIn? eachPage.pageName !== "LogIn" && eachPage.pageName !== "SignUp" : eachPage.pageName !== "LogOut")
+    console.log(filteredHamburgerMenuList)
+
     return (
         <div>
 
@@ -46,7 +49,7 @@ const Header = () => {
                     </div>
                     <div className="ap_hamburger-menu-subcontainer2">
                         {
-                            hamburgerMenuList.map((page, index) => {
+                            filteredHamburgerMenuList.map((page, index) => {
                                 return (
                                     <div key={index} className="a-tl">
                                         <Link to={page.pageLink} className="ap_hamburger-menu-page">

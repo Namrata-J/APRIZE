@@ -1,4 +1,5 @@
 @import url(../../utils/base.css);
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 .ap_home-page {
     background-color: var(--most-lightest-gray);
@@ -8,4 +9,32 @@
     position: fixed;
     width: 100%;
     z-index: 2;
+}
+
+.ap_disclaimer {
+    background-color: var(--action);
+    color: var(--white-color);
+    font-family: 'Gruppo', cursive;
+    word-spacing: 3px;
+    position: sticky;
+    padding: 2px 0px;
+    top: 67px;
+    z-index: 1;
+}
+
+.disclaimer-first {
+    background-color: rgb(134, 170, 92);
+}
+
+@media only screen and (max-width: 495px) {
+    .ap_disclaimer {
+        top: 60px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .ap_disclaimer {
+        font-size: 0.7rem;
+        padding: 1px 0px;
+    }
 }

@@ -18,7 +18,7 @@
 }
 
 .auth-errMsg {
-    position: relative;
+    top: 30px;
     color: var(--light-red);
-    z-index: 1;
+    position: absolute;
 }

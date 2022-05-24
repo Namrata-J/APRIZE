@@ -1,5 +1,5 @@
 .auth-card-section {
-    height: 37rem;
+    height: 31rem;
 }
 
 .auth-card-container {
@@ -7,10 +7,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 90%;
     height: 36rem;
     margin: auto;
+    position: relative;
 }
 
 .auth-card {

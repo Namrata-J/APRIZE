@@ -5,9 +5,9 @@
 .ap_wislisted-products-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     justify-content: center;
-    height: 33rem;
+    height: 27rem;
     overflow-y: scroll;
     padding: 1rem 4rem;
 }
@@ -106,7 +106,7 @@
         padding: 1rem;
     }
 
-    .ap_empty-cart-img {
+    .ap_empty-wishlist-img {
         height: 15rem;
         width: 15rem;
     }
