@@ -16,3 +16,9 @@
     margin: 1rem 0rem 0rem 0rem;
     width: 100%;
 }
+
+.auth-errMsg {
+    position: relative;
+    color: var(--light-red);
+    z-index: 1;
+}

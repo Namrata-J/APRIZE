@@ -4,11 +4,11 @@ import { useAuth } from "../../contexts/auth-context";
 
 const LogOutCard = () => {
 
-    const { handleUserLoggedInState } = useAuth();
+    const { setIsUserLoggedIn } = useAuth();
     const navigate = useNavigate();
 
     const handleLogOutClick = () => {
-        handleUserLoggedInState();
+        setIsUserLoggedIn(false);
         navigate("/")
     }
 
