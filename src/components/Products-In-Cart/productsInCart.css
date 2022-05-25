@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     gap: 3rem;
     justify-content: center;
-    height: 33rem;
+    height: 23rem;
     overflow-y: scroll;
     padding: 1rem 4rem;
 }
@@ -193,5 +193,10 @@
     .ap_products-priceDetails-card {
         height: fit-content;
         width: 15rem;
+    }
+
+    .ap_empty-cart-img {
+        width: 15rem;
+        height: 15rem;
     }
 }

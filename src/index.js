@@ -10,11 +10,11 @@ import { CombinedProvider } from "./components/index";
 makeServer();
 ReactDOM.render(
   <StrictMode>
-    <CombinedProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CombinedProvider>
         <App />
-      </BrowserRouter>
-    </CombinedProvider>
+      </CombinedProvider>
+    </BrowserRouter>
   </StrictMode>,
   document.getElementById("root")
 );

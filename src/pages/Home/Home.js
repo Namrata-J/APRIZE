@@ -12,10 +12,12 @@ const HomePage = () => {
             <div className="ap_home-page-content">
                <CategoryType />
                <MainVedio />
-               <NewArrivalsSection />
+               <div className="ap_disclaimer disclaimer-first">New arrivals at A1 prize</div>
+               <NewArrivalsSection />    
                <FirstVedioCarousel />
                <DiscountedProducts />
                <ShopNowImgSection />
+               <div className="ap_disclaimer disclaimer-second">Sale is live, grab on your favourites</div>
                <ProductsOnSale />
                <GridTemplate />
             </div>

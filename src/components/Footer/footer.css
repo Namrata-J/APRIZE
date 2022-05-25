@@ -1,40 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
 .ap_footer-container {
-    background-color: var(--action);
+    background-color: rgb(26, 32, 53);
     color: var(--white-color);
+    font-weight: lighter;
+    padding-bottom: 2rem;
 }
 
-.ap_footer {
+.ap_footer-connect-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    height: 20vh;
+}
+
+.ap_footer-connect-info a{
+    align-items: center;
+    color: var(--white-color);
     display: flex;
-    flex-wrap: wrap;
+    font-size: 1.2rem;
     justify-content: center;
-    gap: 4rem;
-    padding: 2rem 1rem;
+    text-decoration: none;
+    width: 100%;
 }
 
-.ap_footer p {
-    padding-bottom: 1rem;
+.ap_footer-connect-info a:hover {
+    background: rgba(3, 3, 3, 0.3);
+    font-size: 2rem;
+    transition: 1s;
 }
 
-.ap_footer div {
+.ap_footer-aprize-related-info {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+
+.ap_footer-aprize-related-info .ap_footer-heading {
+    border-bottom: 1px solid gray;
+    font-family: 'Gruppo', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+    text-align: left;
+}
+
+.ap_footer-info-listing {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.2rem;
+    gap: 0.5rem;
 }
 
-.ap_footer a {
+.ap_footer-info-listing p, .ap_footer-container h3, .ap_footer-container p{
+    font-family: 'Gruppo', cursive;
+}
+
+.ap_footer-info-listing a{
     color: var(--white-color);
-    cursor: pointer;
-    font-size: smaller;
+    font-family: 'Gruppo', cursive;
     text-decoration: none;
 }
 
-.ap_footer a:hover {
-    text-decoration: underline;
+.ap_footer-container h3 {
+    padding-top: 3rem;
 }
 
-.ap_copyright-text p{
-    font-size: smaller;
-    padding: 2rem 1rem;
-    text-align: center;
+.ap_footer-aprize-copyright {
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .ap_footer-connect-info {
+        height: 13vh;
+    }
+
+    .ap_footer-connect-info a, .ap_footer-aprize-related-info .ap_footer-heading {
+        font-size: 1rem;
+    }
+
+    .ap_footer-connect-info a:hover {
+        font-size: 1.5rem;
+    }
+
+    .ap_footer-info-listing a, .ap_footer-info-listing p, .ap_footer-aprize-copyright {
+        font-size: 0.8rem;
+    }
 }
