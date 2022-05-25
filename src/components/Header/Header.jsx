@@ -13,7 +13,6 @@ const Header = () => {
     const { popUpSearchBarDisplay, setPopUpSearchBarDisplay, popUpSearchBarInput, setPopUpSearchBarInput, hamburgerMenuList, popUpHamburgerMenuDisplay, setPopUpHamburgerMenuDisplay } = useHeaderIcons();
 
     const filteredHamburgerMenuList = hamburgerMenuList.filter((eachPage) => isUserLoggedIn? eachPage.pageName !== "LogIn" && eachPage.pageName !== "SignUp" : eachPage.pageName !== "LogOut")
-    console.log(filteredHamburgerMenuList)
 
     return (
         <div>

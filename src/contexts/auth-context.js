@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import React, { useState, createContext, useContext } from "react";
 
 const authContext = createContext({ isUserLoggedIn: false });
@@ -11,6 +11,7 @@ const AuthProvider = ({ children }) => {
     const [ signUpErrMsg, setSignUpErrMsg ] = useState("");
     const [ logInErrMsg, setLogInErrMsg ] = useState("");
     const navigate = useNavigate();
+    const location = useLocation()
 
     const signUpHandler = async (e) => {
         e.preventDefault();
@@ -71,6 +72,10 @@ const AuthProvider = ({ children }) => {
                 );
                 if(response){
                     setIsUserLoggedIn(true)
+                    if (location.state !== null) {
+                        navigate(location?.state?.from?.pathname, { replace: true })
+                    } else
+                        navigate("/")
                 }
             } catch(error){
                 console.log(error)

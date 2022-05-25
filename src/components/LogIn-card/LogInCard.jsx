@@ -1,19 +1,14 @@
 import "./logInCard.css";
 import { useAuth } from "../../contexts/auth-context";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LogInCard = () => {
 
     const { guestLoginHandler, loginHandler, formData, setFormData, logInErrMsg, setLogInErrMsg } = useAuth();
-    const location = useLocation();
     const navigate = useNavigate();
 
     const handleLoginClick = () => {
         guestLoginHandler();
-        if (location.state === null) {
-            navigate("/")
-        } else
-            navigate(location?.state?.from?.pathname, { replace: true })
     }
 
     return (
