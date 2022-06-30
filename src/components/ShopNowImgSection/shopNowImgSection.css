@@ -1,85 +1,61 @@
 .ap_home-page-shopNowImg {
-    width: 100%;
     position: relative;
 }
 
-.ap_home-page-shopNowImg img{
+.ap_home-page-shopNowImg video {
+    margin-top: 0.5rem;
     width: 100%;
 }
 
-.ap_home-page-shopNowImg button {
-    font-size: larger;
-    padding: 1rem 1.5rem;
+.ap_home-page-shopNowImg .ap_showNowImg-overlay-container {
+    bottom: 10%;
+    right: 10%;
     position: absolute;
-    top: 50%;
-    left: 10%;
+    text-align: right;
 }
 
-.ap_home-page-shopNowImg button a {
+.ap_home-page-shopNowImg .ap_showNowImg-overlay-container button {
     color: var(--white-color);
-    text-decoration: none;
 }
 
-.ap_home-page-shopNowImg p {
-    color: var(--action);
-    position: absolute;
-    top: 60%;
-    left: 10%;
+.ap_showNowImg-overlay-container button {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.7rem 1.2rem;
 }
 
-@media only screen and (max-width: 1280px) {
-    .ap_home-page-shopNowImg p {
-        top: 63%;
-    }
+.ap_showNowImg-overlay-container p {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    padding-top: 0.5rem;
 }
 
-@media only screen and (max-width: 970px) {
-    .ap_home-page-shopNowImg p {
-        top: 65%;
-    }
-}
-
-@media only screen and (max-width: 760px) {
-    .ap_home-page-shopNowImg p {
-        top: 70%;
+@media only screen and (max-width: 1040px) {
+    .ap_home-page-shopNowImg .ap_showNowImg-overlay-container {
+        bottom: 5%;
     }
 }
 
-@media only screen and (max-width: 620px) {
-    .ap_home-page-shopNowImg button {
-        top: 47%;
+@media only screen and (max-width: 850px) {
+    .ap_home-page-shopNowImg .ap_showNowImg-overlay-container {
+        right: 5%;
+    }
+
+    .ap_showNowImg-overlay-container button {
+        font-size: 1.2rem;
+        padding: 0.7rem 1rem;
     }
 }
 
-@media only screen and (max-width: 550px) {
-    .ap_home-page-shopNowImg button {
-        top: 40%;
+@media only screen and (max-width: 560px) {
+    .ap_showNowImg-overlay-container button {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+        font-weight: lighter;
     }
 
-    .ap_home-page-shopNowImg p {
-        top: 65%;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .ap_home-page-shopNowImg button {
-        font-size: medium;
-        top: 33%;
-        left: 4%;
-    }
-
-    .ap_home-page-shopNowImg p {
-        left: 5%;
-    }
-}
-
-@media only screen and (max-width: 355px) {
-    .ap_home-page-shopNowImg button {
-        top: 28%;
-        left: 3%;
-    }
-
-    .ap_home-page-shopNowImg p {
-        font-size: smaller;
+    .ap_showNowImg-overlay-container p {
+        font-size: 0.8rem;
+        padding-top: 0.3rem;
     }
 }

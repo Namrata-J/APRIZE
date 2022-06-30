@@ -1,14 +1,17 @@
 .auth-card-section {
-    height: 37rem;
+    height: 31rem;
 }
 
 .auth-card-container {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 1rem;
     width: 90%;
     height: 36rem;
     margin: auto;
+    position: relative;
 }
 
 .auth-card {
@@ -19,9 +22,12 @@
     padding: 1rem;
 }
 
-.auth-card-inputs {
+.auth-card-inputs, .ap_auth-card-input-form {
     display: flex;
     flex-direction: column;
+}
+
+.auth-card-inputs {
     padding: 1rem;
 }
 
@@ -61,14 +67,18 @@
     text-decoration: underline;
 }
 
-.ap_logIn-action-btns button {
+.auth-card-inputs button {
     color: var(--white-color);
     margin: 0rem;
     margin-top: 1rem;
     width: 100%;
 }
 
-.ap_logIn-action-btns p {
+.auth-card-inputs p {
+    cursor: pointer;
+}
+
+.auth-card-action-btns p {
     font-size: 0.8rem;
     margin-top: 1rem;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, createContext } from "react";
 import axios from "axios";
 
-const productsDetailContext = createContext({ products: []})
+const productsDetailContext = createContext({ products: null})
 
 const ProductsDetailProvider = ({ children }) => {
     

@@ -1,4 +1,4 @@
-import { useFilterData } from "../../contexts/filterData-context";
+import { useFilterData } from "../../contexts";
 
 const FilterableForm = () => {
 
@@ -35,6 +35,10 @@ const FilterableForm = () => {
         {
             inputId: "ap_filter-furniture",
             categoryName: "Furniture"
+        },
+        {
+            inputId: "ap_filter-free-style",
+            categoryName: "Free Style"
         },
         {
             inputId: "ap_filter-headphones",
@@ -75,6 +79,10 @@ const FilterableForm = () => {
         {
             inputId: "ap_filter-shoes",
             categoryName: "Shoes"
+        },
+        {
+            inputId: "ap_filter-sunglasses",
+            categoryName: "Sunglasses"
         },
         {
             inputId: "ap_filter-watches",

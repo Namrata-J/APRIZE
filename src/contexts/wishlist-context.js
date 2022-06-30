@@ -8,7 +8,7 @@ const WishlistProvider = ({ children }) => {
         if(stateOfWishlist.some(item => item._id === product._id)){
             return "var(--light-red)"
         }else
-            return "var(--black)"
+            return "var(--medium-gray)"
     }
 
     const wishlistReducer = (stateOfWishlist, action) => {

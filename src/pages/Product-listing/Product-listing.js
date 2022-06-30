@@ -1,6 +1,6 @@
 import React from "react";
 import "./product-listing.css";
-import { Header, SideBar, Product } from "../../components/index";
+import { Header, SideBar, ProductsSection, Footer } from "../../components/index";
 
 const ProductListingPage = () => {
     return (
@@ -10,8 +10,9 @@ const ProductListingPage = () => {
             </div>
             <div className="ap_productListing-main-section">
                 <SideBar />
-                <Product />
+                <ProductsSection />
             </div>
+            <Footer />
         </div>
     );
 }

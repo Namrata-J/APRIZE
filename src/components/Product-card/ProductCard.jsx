@@ -1,98 +1,83 @@
-import "./productCard.css";
-import { FaRegHeart } from 'react-icons/fa';
-import { useFilterData } from "../../contexts/filterData-context";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { getProductClass, getOriginalPrice } from "../../utils/productutilFuncs";
-import { useWishlist } from "../../contexts/wishlist-context";
+import React from "react";
+import { VscHeart } from "../../utils/icons";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../../contexts/cart-context";
+import { useCart, useWishlist, useAuth } from "../../contexts";
+import { getOriginalPrice } from "../../utils/productutilFuncs";
 
-const ProductCard = () => {
-
-    const location = useLocation();
-    
-    const category = location?.state?.category
-
-    const newArrivalCategory = location?.state?.isNewArrival
-
-    const discountedProducts = location?.state?.hasDiscount
-
-    const productOnSale = location?.state?.onSale
-
-    const navigate = useNavigate();
+const ProductCard = (product) => {
 
     const { dipatchOfWishlist, getLikeButtonStyle } = useWishlist();
 
     const { stateOfCart, dispatchOfCart } = useCart();
-    
-    const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
 
-    useEffect(() => {
-        if( category ){
-           if( category=== "Men" || category=== "Women" || category=== "Kids" ){
-              if( !(stateOfProductsBeingShown.filterSectionVal.includes(category)) ){
-                  dispatchOfProductsBeingShown({ type: "clear" })
-                  dispatchOfProductsBeingShown({ type: "filterBySection", payload: category })
-              }
-           }else
-              if( !(stateOfProductsBeingShown.filterCategoryVal.includes(category)) ){
-                  dispatchOfProductsBeingShown({ type: "clear" })
-                  dispatchOfProductsBeingShown({ type: "filterByCategory", payload: category })
-                }
-        }
+    const { isUserLoggedIn } = useAuth();
 
-        if( newArrivalCategory ){
-            dispatchOfProductsBeingShown({ type: "clear" })
-            dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isNewArrival" })
-        }
-
-        if( discountedProducts ){
-            dispatchOfProductsBeingShown({ type: "clear" })
-            dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "hasDiscount" })
-        }
-
-        if( productOnSale ){
-            dispatchOfProductsBeingShown({ type: "clear" })
-            dispatchOfProductsBeingShown({ type: "filterByProducts", payload: "isInSale" })
-        }
-    },[])
+    const navigate = useNavigate();
 
     return (
-        <div className="ap_all-products">
-            {
-                filteredProductList.map((product, index) => {
-                    return (
-                        <div className={getProductClass(product)} key={index}>
-                            { product.isNewArrival ? <div className="badge-type1 fw-4">New</div> : "" }
-                            { !product.isInStock ? <div className="badge-type3">Stock Out</div> : "" }
-                            <i onClick={() => dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })} style={{ color: getLikeButtonStyle(product) }} ><FaRegHeart /></i>
-
-                            <div className="card-w-badge-subcontainer1" style= {{ backgroundImage: `url(${ product.img })`}}>
-                            </div>
-                            <div className="card-w-badge-subcontainer2">
-                                <div className="product-description">
-                                    <div className="card-title fw-4 a-tl">{ product.brandName }</div>
-                                    <div className="card-subtitle a-tl">{ product.description }</div>
-                                </div>
-                                <div className="card-product-price fw-3">
-                                    <div className="ap_card-pp a-tl">
-                                        <span className="p-mrp fw-1 a-tl">{ getOriginalPrice(product) }</span>
-                                        <span className="p-discounted-price a-tl">{`₹${ product.discountedPrice }`}</span>
-                                    </div>
-                                    <div className="p-dicount a-tl">{ product.discount==="" ? "" : `${ product.discount }%` }</div>
-                                </div>
-                            </div>
-                            <div className="card-w-badge-subcontainer3">
-                                <button className="et_p-simple-btn action-color btn" disabled = { !product.isInStock } onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: product })} > { stateOfCart.some(item => item._id === product._id)? "Added" : "Add To Cart" }</button>
-                                <button className="et_so-btn action-color btn" disabled = { !product.isInStock } onClick={() => navigate("/Cart")} >Buy Now</button>
-                            </div>
+        <div className="ap_product-card" onClick={() => navigate(`/ProductDetails/${product._id}`)} >
+            <VscHeart
+                className="ap_product-wishlist-icon"
+                onClick={
+                    (e) => {
+                        if(isUserLoggedIn)
+                        {
+                            dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })
+                            e.stopPropagation()
+                        }
+                    }}
+                style={{ color: getLikeButtonStyle(product) }} />
+            <div className="ap_product-card-subcontainer1">
+                <div className="ap_product-description">
+                    <div className="ap_product-title fw-4 a-tl">
+                        {product.brandName}
+                        {product.isNewArrival ? <span className="ap_product-new-arrival-badge b-rad3">New</span> : ""}
+                        {product.isTrending ? <span className="ap_product-trending-badge b-rad3">Trending</span> : ""}
+                        {!product.isInStock ? <span className="ap_product-stock-out-badge b-rad3">Stock Out</span> : ""}
+                    </div>
+                    <div className="ap_product-subtitle a-tl">
+                        {product.description}
+                    </div>
+                </div>
+            </div>
+            <div
+                className="ap_product-card-subcontainer2"
+                style={{ backgroundImage: `url(${product.img[0]})`, backgroundPosition: "center", backgroundSize: "cover", opacity: !product.isInStock ? "0.4" : "1" }}>
+            </div>
+            <div className="ap_product-card-subcontainer3">
+                <div className="ap_product-details">
+                    <div className="ap_product-price-details a-tl">
+                        <div className="ap_product-original-price">
+                            {getOriginalPrice(product)}
                         </div>
-                    )
-                })
-            }
+                        <div className="ap_product-discounted-price fw-3">
+                            {`₹${product.discountedPrice}`}
+                        </div>
+                    </div>
+                    <div className="ap_product-discount a-tl fw-3">
+                        {product.discount === "" ? "" : `${product.discount}%`}
+                    </div>
+                </div>
+                <button
+                    className="ap_product-card-action-btn b-rad3"
+                    style={
+                        stateOfCart.some(item => item._id === product._id) ? 
+                        { backgroundColor: "var(--action)", color: "var(--white-color)" } : 
+                        { backgroundColor: "var(--white-color)", color: "var(--action)" }
+                    }
+                    disabled={!product.isInStock}
+                    onClick={
+                        (e) => {
+                            if(isUserLoggedIn){
+                                dispatchOfCart({ type: "ADD_TO_CART", payload: product })
+                                e.stopPropagation()
+                            }
+                                }}>
+                    {stateOfCart.some(item => item._id === product._id) ? "Added" : "Add To Cart"}
+                </button>
+            </div>
         </div>
-    );
+    )
 }
 
-export { ProductCard, getProductClass, getOriginalPrice };
+export { ProductCard };

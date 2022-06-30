@@ -1,8 +1,7 @@
 import "./productsInCart.css";
 import { Link } from "react-router-dom";
+import { useCart, useWishlist } from "../../contexts";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
-import { useWishlist } from "../../contexts/wishlist-context";
-import { useCart } from "../../contexts/cart-context";
 
 const ProductsInCart = () => {
 
@@ -28,7 +27,7 @@ const ProductsInCart = () => {
                                     <div className="ap_myCart-product" key={ index }>
                                         <div className="ap_myCart-product-container1">
                                             <div className="ap_myCart-product-subContainer11">
-                                                <img src={ cartProduct.img } alt="product image" />
+                                                <img src={ cartProduct.img[0] } alt="product image" />
                                             </div>
                                             <div className="ap_myCart-product-subContainer12">
                                                 <div className="ap_myCart-product-brandName fw-4 a-tl">{ cartProduct.brandName }</div>

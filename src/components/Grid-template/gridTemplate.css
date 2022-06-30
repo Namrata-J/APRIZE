@@ -1,0 +1,278 @@
+.ap_grid-template {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(34, 10px);
+    padding: 1rem;
+    padding-top: 0rem;
+    width: 100%;
+}
+
+.ap_grid-template .template-type1 {
+    grid-column: span 24;
+    grid-row: span 20;
+}
+
+.ap_grid-template .template-type2 {
+    grid-column: span 6;
+    grid-row: span 10;
+}
+
+.ap_grid-template .template-type3 {
+    grid-column: span 6;
+    grid-row: span 7;
+}
+
+.ap_grid-template .template-type4 {
+    grid-column: span 6;
+    grid-row: span 10;
+}
+
+.ap_grid-template .template-type5 {
+    grid-column: span 6;
+    grid-row: span 10;
+}
+
+.ap_grid-template .template-type6 {
+    grid-column: span 6;
+    grid-row: span 7;
+}
+
+.ap_template-type {
+    box-shadow: 0px 0px 2px 0px var(--medium-gray);
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.ap_template-type img {
+    height: 100%;
+    width: 100%;
+}
+
+.ap_template-type img:hover {
+    box-shadow: 0px 0px 10px 0px var(--medium-gray);
+}
+
+.ap_grid-template-overlay {
+    background: rgba(238, 241, 243, 0.7);
+    bottom: 30%;
+    position: absolute;
+    width: 100%;
+}
+
+.ap_grid-template-overlay-text {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    padding: 0.2rem 0rem;
+}
+
+@media only screen and (max-width: 1125px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(30, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 16;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 6;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: span 8;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .ap_grid-template .template-type2 {
+        grid-row: span 8;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(26, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 14;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 5;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: span 7;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: span 6;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(20, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 11;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 6;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 4;
+    }
+}
+
+@media only screen and (max-width: 745px) {
+    .ap_grid-template {
+        gap: 0.5rem;
+        grid-template-rows: repeat(35, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 18;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 7;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: span 10;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .ap_grid-template-overlay-text {
+        font-size: 0.8rem;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: span 8;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .ap_grid-template {
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: repeat(47, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-column: span 24;
+        grid-row: span 18;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-column: span 8;
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: 19/28;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(64, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 14;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-column: span 12;
+        grid-row: span 17;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 8;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-column: span 12;
+        grid-row: 15/30;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(54, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 13;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 14;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 6;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: 14/27;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(50, 10px);
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 12;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: 14/25;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .ap_grid-template {
+        grid-template-rows: repeat(41, 10px);
+    }
+
+    .ap_grid-template .template-type1 {
+        grid-row: span 9;
+    }
+
+    .ap_grid-template .template-type2 {
+        grid-row: span 10;
+    }
+
+    .ap_grid-template .template-type3, .ap_grid-template .template-type6 {
+        grid-row: span 5;
+    }
+
+    .ap_grid-template .template-type4, .ap_grid-template .template-type5 {
+        grid-row: 10/20;
+    }
+}
