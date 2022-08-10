@@ -13,6 +13,7 @@
 * Home
 * Wishlist
 * Product Listing
+* Single Product Listing Page
 
 ### Backend
 * MockBee providing api's and mock backend
@@ -78,6 +79,13 @@ In detail:
       - You can remove the item from the wishlist
       - Add the item to the cart
 * If the cart already contains that item, it's only increasing the quantity.
+
+#### Single Product Listing Page
+![image](https://user-images.githubusercontent.com/82696858/183912648-8a1d7dc5-62f2-4dbc-81e9-282b027693eb.png)
+
+![image](https://user-images.githubusercontent.com/82696858/183912799-cb7b32d9-469a-480b-9492-f835e953fad0.png)
+
+Clicking on any product would navigate you to the single product listing page, listing all the details of the product, only if the user is authenticated.
 
 #### Auth Pages
 * UI for auth pages has been added.
