@@ -1,6 +1,9 @@
 ## APRIZE
 
-**APRIZE** is an ecommerce store, where you can buy goods of your choice at A1 price. 
+**APRIZE** is an ecommerce store, where you can buy goods of your choice at A1 price. <br>
+
+![image](https://user-images.githubusercontent.com/82696858/183899506-02709856-be21-429a-ab19-33293a157245.png)
+
 
 ### Pages
 * LogIn
@@ -18,6 +21,7 @@
 ### Functionalities
 
 #### Landing Page
+![image](https://user-images.githubusercontent.com/82696858/183900328-44512657-2eb4-4843-8aaf-92d4ccf7d61e.png)
 
 Brief:
 You can see a landing page with a list of featured categories.
@@ -30,6 +34,7 @@ In detail:
 * Clicking on shopNow would take you to the productlisting page, and will list you all the products.
 
 #### Product Listing Page
+![image](https://user-images.githubusercontent.com/82696858/183900604-fa34b013-41cb-469f-b675-d7f7c16dd9f1.png)
 
 * you can see a product listing page where all the products are listed with a section of filters.
 * you can see multiple filters on the product listing page including,
@@ -47,6 +52,11 @@ In detail:
       - Add to Wishlist: You can click on a "Wishlist" icon button where if you click, adds the item in the wishlist & vice-verse.
 
 #### Cart Management
+![image](https://user-images.githubusercontent.com/82696858/183900903-d4850e25-dae0-4362-873d-9fed2378a7f8.png)
+
+![image](https://user-images.githubusercontent.com/82696858/183901273-4a438121-8ed6-4227-bb8e-f3bd9e9ed7e8.png)
+
+![image](https://user-images.githubusercontent.com/82696858/183901416-9abec45d-8bf3-4c51-9350-8d51f523071a.png)
 
 * From the navbar, you can navigate to the cart where all the products that you want to buy are mentioned. And the counter value of the products added in cart is shown as a badge on the cart icon on header.
 * On the product card in cart,
@@ -57,6 +67,11 @@ In detail:
 * You can see the price details card of the cart which will show the total price of the products with its quantity.
 
 #### Wishlist Management
+![image](https://user-images.githubusercontent.com/82696858/183901605-9cdf8e7c-2fb2-4912-a2e6-afffa7da1fbf.png)
+
+![image](https://user-images.githubusercontent.com/82696858/183901731-26442710-afbe-4241-b0b5-d15bee103712.png)
+
+![image](https://user-images.githubusercontent.com/82696858/183901833-92d33713-8fb5-420f-973f-1c51c9f149e7.png)
 
 * From the navbar, you can navigate to my wishlist where all the products that you would like to buy are mentioned. And the counter value of the products wishlisted is shown as a badge on the cart icon on header.
 * On the wishlisted product card,
@@ -66,5 +81,17 @@ In detail:
 
 #### Auth Pages
 * UI for auth pages has been added.
+
+#### - SignUp Page
+![image](https://user-images.githubusercontent.com/82696858/183902443-73dfe34b-13f0-49f2-98f7-47a64f141834.png)
+You can see a sign-up page from where you can sign-up using my email, password.
+
+#### - LogIn Page
+![image](https://user-images.githubusercontent.com/82696858/183902759-f169899c-3642-4bc4-9e5c-0f58a1d10c3e.png)
+You can see a login page from where you can log in using my email & password.
+
+#### - LogOut Page
+![image](https://user-images.githubusercontent.com/82696858/183903189-85ee7fa3-578c-4f79-a014-32e690bddefd.png)
+Clicking on the logout button would log you out from the app, and would navigate you to the home page.
 
 
