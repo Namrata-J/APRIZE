@@ -1,11 +1,34 @@
-## APRIZE
+<h1 align="center">APRIZE</h1>
+<p align="center">APRIZE is an eommerce store.</p>
+<p align="center">Get your choices at A1 prize at APRIZE.</p>
 
-**APRIZE** is an ecommerce store, where you can buy goods of your choice at A1 price. <br>
+                                               APRIZE: (https://aprize-ecom-site.netlify.app/)
 
-![image](https://user-images.githubusercontent.com/82696858/183899506-02709856-be21-429a-ab19-33293a157245.png)
+### Tech Stack
 
+#### Frontend:
+- React
+- CSS3
+- Expeditech UI
+- React Router
+- ContextAPI
 
-### Pages
+#### Backend
+- Mockbee
+
+<hr>
+
+## Table Of Contents
+1. [Pages](#Pages)
+2. [Deployment Status](#status)
+3. [Backend](#mockbee)
+4. [Functionalities/Features](#feature)
+5. [Social Platforms](#social)
+6. [Contribution guidlines](#contribution)
+
+<hr>
+
+## Pages<a name="Pages"></a>
 * LogIn
 * LogOut
 * SignUp
@@ -15,11 +38,22 @@
 * Product Listing
 * Single Product Listing Page
 
-### Backend
+<hr>
+
+## Deployment Status<a name="status"></a>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/65ff00ec-f61e-4e0e-a10a-973ac8a0f7e5/deploy-status)](https://app.netlify.com/sites/aprize-ecom-site/deploys)
+
+[To learn more about status badges visit -->](https://docs.netlify.com/monitor-sites/status-badges/?_ga=2.33791655.74730842.1660376495-236702144.1656589951)
+
+<hr>
+
+## Backend<a name="mockbee"></a>
 * MockBee providing api's and mock backend
 * MockMan for testing api's
 
-### Functionalities
+<hr>
+
+## Functionalities<a name="feature"></a>
 
 #### Landing Page
 ![image](https://user-images.githubusercontent.com/82696858/183900328-44512657-2eb4-4843-8aaf-92d4ccf7d61e.png)
@@ -102,4 +136,20 @@ You can see a login page from where you can log in using my email & password.
 ![image](https://user-images.githubusercontent.com/82696858/183903189-85ee7fa3-578c-4f79-a014-32e690bddefd.png)
 Clicking on the logout button would log you out from the app, and would navigate you to the home page.
 
+<hr>
+
+## Connect to us via social platforms<a name="social"></a>
+[Twitter](https://twitter.com/muse_the_coder) <br>
+[LinkedIn](https://www.linkedin.com/in/namrata-jain-2b6203216/) <br>
+[Instagram](https://www.instagram.com/the_dexterous_me/?r=nametag) <br>
+[Gmail](mailto: namratajain29001@gmail.com) <br>
+
+<hr>
+
+## Contribution guidlines<a name="contribution"></a>
+For contributing to expeditech UI,
+1. Clone & Fork the repo.
+2. Make a feature branch from dev.
+3. Commit and push those changes.
+4. Raise the PR(pull request).
 
