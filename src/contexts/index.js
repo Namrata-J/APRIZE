@@ -1,9 +1,7 @@
-import { useCart } from "./cart-context";
-import { useFilterData } from "./filterData-context";
-import { useHeaderIcons } from "./headerIcons-context";
-import { useProductsDetail } from "./productsDetail-context";
-import { useProductsGridClass } from "./productsGridClass-context";
-import { useWishlist } from "./wishlist-context";
-import { useAuth } from "./auth-context";
-
-export { useCart, useFilterData, useHeaderIcons, useProductsDetail, useProductsGridClass, useWishlist, useAuth };
+export { useCart } from "./cart-context";
+export { useFilterData } from "./filterData-context";
+export { useHeaderIcons } from "./headerIcons-context";
+export { useProductsDetail } from "./productsDetail-context";
+export { useProductsGridClass } from "./productsGridClass-context";
+export { useWishlist } from "./wishlist-context";
+export { useAuth } from "./auth-context";

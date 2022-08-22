@@ -1,5 +1,5 @@
-import React from "react";
 import "./logOut.css";
+import React from "react";
 import { Header, LogOutCard, Footer } from "../../../components/index";
 
 const LogOutPage = () => {

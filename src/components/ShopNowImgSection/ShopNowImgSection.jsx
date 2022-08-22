@@ -1,3 +1,4 @@
+import { CLEAR } from "../../constants/filterStateConstants";
 import { useNavigate } from "react-router-dom";
 import { useFilterData } from "../../contexts";
 import "./shopNowImgSection.css";
@@ -14,7 +15,7 @@ const ShopNowImgSection = () => {
                <button className="et_p-simple-btn action-color btn" 
                onClick={
                    () => {        
-                       dispatchOfProductsBeingShown({ type: "clear" })
+                       dispatchOfProductsBeingShown({ type: CLEAR })
                        navigate("/Productlisting")
                        }}>
                            Shop Now

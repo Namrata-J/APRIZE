@@ -2,7 +2,9 @@ import React from "react";
 import { Carousel } from "../";
 import "./singleProductDetails.css";
 import { useParams, useNavigate } from "react-router-dom";
+import { ADD_TO_CART } from "../../constants/cartConstants";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
+import { ADD_TO_WISHLIST } from "../../constants/wishlistConstants";
 import { useCart, useProductsDetail, useWishlist } from "../../contexts";
 
 const SingleProductDetails = () => {
@@ -51,13 +53,13 @@ const SingleProductDetails = () => {
                         <div className="ap_singleProduct-action-btns">
                             <button
                                 className="ap_singleProduct-action-btn"
-                                onClick={() => dispatchOfCart({ type: "ADD_TO_CART", payload: singleProduct })}
+                                onClick={() => dispatchOfCart({ type: ADD_TO_CART, payload: singleProduct })}
                                 disabled={!singleProduct.isInStock} >
                                 {stateOfCart.some(item => item._id === singleProduct._id) ? "Added" : "Add To Cart"}
                             </button>
                             <button
                                 className="ap_singleProduct-action-btn"
-                                onClick={() => dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: singleProduct })}>
+                                onClick={() => dipatchOfWishlist({ type: ADD_TO_WISHLIST, payload: singleProduct })}>
                                 {stateOfWishlist.some(item => item._id === singleProduct._id) ? "Wishlisted" : "Add To Wishlist"}
                             </button>
                         </div>

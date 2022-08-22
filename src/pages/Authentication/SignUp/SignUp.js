@@ -1,5 +1,5 @@
-import React from "react";
 import "./signUp.css";
+import React from "react";
 import { Header, SignUpCard, Footer } from "../../../components/index";
 
 const SignUpPage = () => {

@@ -19,7 +19,10 @@ const LogOutCard = () => {
                 <div className="ap_logout-card auth-card">
                     <div className="ap_logout-first-section">
                         <div className="et_circular-wbn-avatars">
-                            <img className="et_circular-avatar wbn l-avatar b-rad4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnD4e6B_8RzF8ZOT4kg-5OKSJVauyqxhZFw&usqp=CAU" alt="circular avatar" />
+                            <img
+                                className="et_circular-avatar wbn l-avatar b-rad4"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnD4e6B_8RzF8ZOT4kg-5OKSJVauyqxhZFw&usqp=CAU"
+                                alt="circular avatar" />
                             <div className="et_notifi-avatar-n green b-rad4 l-avatar-bn"></div>
                         </div>
                         <h4>APRIZE</h4>

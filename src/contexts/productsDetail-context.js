@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect, createContext } from "react";
 import axios from "axios";
 
-const productsDetailContext = createContext({ products: null})
+const productsDetailContext = createContext({ products: null })
 
 const ProductsDetailProvider = ({ children }) => {
-    
+
     const [productsDataFetchedFromApi, setProductsDataFetchedFromApi] = useState([]);
 
     useEffect(() =>
@@ -14,10 +14,14 @@ const ProductsDetailProvider = ({ children }) => {
         })(), []
     );
 
-    return <productsDetailContext.Provider value= {{ productsDataFetchedFromApi, setProductsDataFetchedFromApi }}>
-        { children }
+    return <productsDetailContext.Provider
+        value={{
+            productsDataFetchedFromApi,
+            setProductsDataFetchedFromApi
+        }}>
+        {children}
     </productsDetailContext.Provider>
-} 
+}
 
 const useProductsDetail = () => useContext(productsDetailContext);
 

@@ -83,7 +83,7 @@ const categoryTypeArr = [
         category: "Bags",
         img: "https://res.cloudinary.com/nj1508/image/upload/t_aprize_ct/v1650191981/category-type/ct18.jpg"
     }
-]; 
+];
 
 const newArrivalsArr = [
     {
@@ -260,4 +260,11 @@ const gridTemplatesArr = [
     }
 ];
 
-export { categoryTypeArr, newArrivalsArr, discountedProductsArr, productsOnSaleArr, firstVedioCarouselData, gridTemplatesArr };
+export {
+    categoryTypeArr,
+    newArrivalsArr,
+    discountedProductsArr,
+    productsOnSaleArr,
+    firstVedioCarouselData,
+    gridTemplatesArr
+};

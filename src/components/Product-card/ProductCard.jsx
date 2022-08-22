@@ -1,28 +1,33 @@
 import React from "react";
 import { VscHeart } from "../../utils/icons";
 import { useNavigate } from "react-router-dom";
+import { ADD_TO_CART } from "../../constants/cartConstants";
 import { useCart, useWishlist, useAuth } from "../../contexts";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
+import { ADD_TO_WISHLIST } from "../../constants/wishlistConstants";
 
 const ProductCard = (product) => {
 
     const { dipatchOfWishlist, getLikeButtonStyle } = useWishlist();
-
     const { stateOfCart, dispatchOfCart } = useCart();
-
     const { isUserLoggedIn } = useAuth();
-
     const navigate = useNavigate();
 
     return (
-        <div className="ap_product-card" onClick={() => navigate(`/ProductDetails/${product._id}`)} >
+        <div
+            className="ap_product-card"
+            onClick={() => navigate(`/ProductDetails/${product._id}`)} >
             <VscHeart
                 className="ap_product-wishlist-icon"
                 onClick={
                     (e) => {
-                        if(isUserLoggedIn)
-                        {
-                            dipatchOfWishlist({ type: "ADD_TO_WISHLIST", payload: product })
+                        if (isUserLoggedIn) {
+                            dipatchOfWishlist(
+                                {
+                                    type: ADD_TO_WISHLIST,
+                                    payload: product
+                                }
+                            )
                             e.stopPropagation()
                         }
                     }}
@@ -42,7 +47,12 @@ const ProductCard = (product) => {
             </div>
             <div
                 className="ap_product-card-subcontainer2"
-                style={{ backgroundImage: `url(${product.img[0]})`, backgroundPosition: "center", backgroundSize: "cover", opacity: !product.isInStock ? "0.4" : "1" }}>
+                style={{
+                    backgroundImage: `url(${product.img[0]})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    opacity: !product.isInStock ? "0.4" : "1"
+                }}>
             </div>
             <div className="ap_product-card-subcontainer3">
                 <div className="ap_product-details">
@@ -61,18 +71,18 @@ const ProductCard = (product) => {
                 <button
                     className="ap_product-card-action-btn b-rad3"
                     style={
-                        stateOfCart.some(item => item._id === product._id) ? 
-                        { backgroundColor: "var(--action)", color: "var(--white-color)" } : 
-                        { backgroundColor: "var(--white-color)", color: "var(--action)" }
+                        stateOfCart.some(item => item._id === product._id) ?
+                            { backgroundColor: "var(--action)", color: "var(--white-color)" } :
+                            { backgroundColor: "var(--white-color)", color: "var(--action)" }
                     }
                     disabled={!product.isInStock}
                     onClick={
                         (e) => {
-                            if(isUserLoggedIn){
-                                dispatchOfCart({ type: "ADD_TO_CART", payload: product })
+                            if (isUserLoggedIn) {
+                                dispatchOfCart({ type: ADD_TO_CART, payload: product })
                                 e.stopPropagation()
                             }
-                                }}>
+                        }}>
                     {stateOfCart.some(item => item._id === product._id) ? "Added" : "Add To Cart"}
                 </button>
             </div>

@@ -13,10 +13,13 @@ const DiscountedProducts = () => {
                 </div>
                 {
                     discountedProductsArr.map((discountedProducts, index) => (
-                            <Link to="/Productlisting" key={index} state={discountedProducts}>
-                                <img src={discountedProducts.img} alt="discounted Product" className="ap_discountedProduct-img" />
-                            </Link>
-                        )
+                        <Link to="/Productlisting" key={index} state={discountedProducts}>
+                            <img
+                                src={discountedProducts.img}
+                                alt="discounted Product"
+                                className="ap_discountedProduct-img" />
+                        </Link>
+                    )
                     )
                 }
             </div>
