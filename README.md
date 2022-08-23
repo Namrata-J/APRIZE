@@ -2,7 +2,7 @@
 <p align="center">APRIZE is an eommerce store.</p>
 <p align="center">Get your choices at A1 prize at APRIZE.</p>
 
-                                               APRIZE: (https://aprize-ecom-site.netlify.app/)
+                                                   https://aprize-ecom-site.netlify.app/
 
 ### Tech Stack
 
