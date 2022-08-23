@@ -5,8 +5,8 @@ const headerIconsContext = createContext(null);
 
 const HeaderIconsProvider = ({ children }) => {
 
-    const [popUpSearchBarDisplay, setPopUpSearchBarDisplay] = useState("none");
     const [popUpSearchBarInput, setPopUpSearchBarInput] = useState("");
+    const [popUpSearchBarDisplay, setPopUpSearchBarDisplay] = useState("none");
     const [popUpHamburgerMenuDisplay, setPopUpHamburgerMenuDisplay] = useState("none");
 
     const hamburgerMenuList = [
@@ -37,7 +37,16 @@ const HeaderIconsProvider = ({ children }) => {
         }
     ];
 
-    return <headerIconsContext.Provider value={{ popUpSearchBarDisplay, setPopUpSearchBarDisplay, popUpSearchBarInput, setPopUpSearchBarInput, hamburgerMenuList, popUpHamburgerMenuDisplay, setPopUpHamburgerMenuDisplay }}>
+    return <headerIconsContext.Provider
+        value={{
+            popUpSearchBarDisplay,
+            setPopUpSearchBarDisplay,
+            popUpSearchBarInput,
+            setPopUpSearchBarInput,
+            hamburgerMenuList,
+            popUpHamburgerMenuDisplay,
+            setPopUpHamburgerMenuDisplay
+        }}>
         {children}
     </headerIconsContext.Provider>
 }

@@ -7,7 +7,9 @@ const NoRouteMatchPageComp = () => {
         <div className="ap_noRouteMatchPage">
             <div className="ap_noRouteMatchPage-inner-container">
                 <img src={errorImg} />
-                <p>Oops! Seems like the page you are searching for doesn't exists.</p>
+                <p>
+                    Oops! Seems like the page you are searching for doesn't exists.
+                </p>
             </div>
         </div>
     );

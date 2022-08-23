@@ -1,5 +1,5 @@
-import React from "react";
 import "./logIn.css";
+import React from "react";
 import { Header, LogInCard, Footer } from "../../../components/index";
 
 const LogInPage = () => {

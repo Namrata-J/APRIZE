@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { HomePage, ProductListingPage, NoRouteMatchPageComp, ProductDetailPage, WishlistPage, CartPage, LogInPage, LogOutPage, SignUpPage } from "../../pages";
-import { RequiresAuthComp } from "../index";
+import { HomePage, ProductListingPage, NoRouteMatchPageComp, ProductDetailPage, WishlistPage, CartPage, LogInPage, LogOutPage, SignUpPage } from "../pages";
+import { RequiresAuthComp } from "../components/index";
 
 const RoutesComponent = () => {
 

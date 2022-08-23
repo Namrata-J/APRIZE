@@ -13,7 +13,9 @@ const ProductsSection = () => {
                 <div className="ap_product-listing">
                     <h4 className="ap_showProducts-count-heading">
                         Showing Products
-                        <span className="ap_all-product-listing fw-1">(Showing {filteredProductList.length} products)</span>
+                        <span className="ap_all-product-listing fw-1">
+                            (Showing {filteredProductList.length} products)
+                        </span>
                     </h4>
                     <ProductCardListing />
                 </div>
