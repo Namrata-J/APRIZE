@@ -1,4 +1,5 @@
 import "./logOutCard.css";
+import toast from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/auth-context";
 
@@ -10,6 +11,7 @@ const LogOutCard = () => {
     const handleLogOutClick = () => {
         setIsUserLoggedIn(false);
         navigate("/")
+        toast.success('LoggedOut successfully!')
     }
 
     return (

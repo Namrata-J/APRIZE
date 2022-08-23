@@ -1,4 +1,5 @@
 import axios from "axios";
+import toast from 'react-hot-toast';
 import { useNavigate, useLocation } from "react-router-dom";
 import React, { useState, createContext, useContext } from "react";
 
@@ -27,9 +28,14 @@ const AuthProvider = ({ children }) => {
                         localStorage.setItem("token", response.data.encodedToken)
                         setIsUserLoggedIn(true)
                         navigate("/")
+                        toast.success('Successfully loggedIn', {
+                            position: "top-center"
+                        })
                         setFormData({ ...formData, userEmail: "", userPwd: "" })
                     } catch (error) {
-                        console.log(error);
+                        toast.error('Server error: cannnot signup', {
+                            position: "bottom-center"
+                        })
                     }
                 } else {
                     setSignUpErrMsg("Pwd should be alphanumeric and have atleast six characters")
@@ -53,9 +59,14 @@ const AuthProvider = ({ children }) => {
                 localStorage.setItem("token", response.data.encodedToken)
                 setIsUserLoggedIn(true)
                 navigate("/")
+                toast.success('Successfully loggedIn', {
+                    position: "top-center"
+                })
             } catch (error) {
                 setLogInErrMsg("Either email or pwd is incorrect")
-                console.log(error)
+                toast.error('Error occurred', {
+                    position: "bottom-center"
+                })
                 setFormData({ ...formData, userEmail: "", userPwd: "" })
             }
         } else {
@@ -76,9 +87,14 @@ const AuthProvider = ({ children }) => {
                     navigate(location?.state?.from?.pathname, { replace: true })
                 } else
                     navigate("/")
+                toast.success('Successfully loggedIn', {
+                    position: "top-center"
+                })
             }
         } catch (error) {
-            console.log(error)
+            toast.error('Server error has occurred', {
+                position: "bottom-center"
+            })
         }
     }
 

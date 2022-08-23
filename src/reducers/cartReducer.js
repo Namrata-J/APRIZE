@@ -5,10 +5,13 @@ import {
     INCREASE_QUANTITY,
     DECREASE_QUANTITY
 } from "../constants/cartConstants";
+import toast from 'react-hot-toast';
+import { toastTheme } from "../utils/customToastTheme";
 
 export const cartReducer = (stateOfCart, action) => {
     switch (action.type) {
         case MOVE_TO_CART:
+            toast.success('Product Moved To Cart', toastTheme)
             if (!(stateOfCart.some(item => item._id === action.payload._id))) {
                 return [
                     ...stateOfCart,
@@ -21,6 +24,7 @@ export const cartReducer = (stateOfCart, action) => {
                         item
                 )
         case ADD_TO_CART:
+            toast.success('Added To Cart', toastTheme)
             if (!(stateOfCart.some(item => item._id === action.payload._id))) {
                 return [
                     ...stateOfCart,
@@ -29,6 +33,7 @@ export const cartReducer = (stateOfCart, action) => {
             } else
                 return stateOfCart
         case REMOVE_FROM_CART:
+            toast.success('Removed From Cart', toastTheme)
             return stateOfCart.filter(item => item._id !== action.payload._id)
         case INCREASE_QUANTITY:
             return stateOfCart.map(item =>
