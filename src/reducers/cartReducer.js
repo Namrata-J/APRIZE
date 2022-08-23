@@ -11,21 +11,23 @@ import { toastTheme } from "../utils/customToastTheme";
 export const cartReducer = (stateOfCart, action) => {
     switch (action.type) {
         case MOVE_TO_CART:
-            toast.success('Product Moved To Cart', toastTheme)
             if (!(stateOfCart.some(item => item._id === action.payload._id))) {
+                toast.success('Product Moved To Cart', toastTheme)
                 return [
                     ...stateOfCart,
                     { ...action.payload, qt: 1 }
                 ]
-            } else
+            } else {
+                toast.success('Product Already Exists In Cart', toastTheme)
                 return stateOfCart.map(item =>
                     item._id === action.payload._id ?
                         { ...item, qt: item.qt + 1 } :
                         item
                 )
+            }
         case ADD_TO_CART:
-            toast.success('Added To Cart', toastTheme)
             if (!(stateOfCart.some(item => item._id === action.payload._id))) {
+                toast.success('Added To Cart', toastTheme)
                 return [
                     ...stateOfCart,
                     { ...action.payload, qt: 1 }
