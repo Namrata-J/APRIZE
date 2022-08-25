@@ -4,6 +4,7 @@
     display: grid;
     gap: 1rem;
     margin: 1rem 0rem;
+    padding-bottom: 1rem;
 }
 
 .normal-grid {

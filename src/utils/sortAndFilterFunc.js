@@ -44,19 +44,41 @@ const filterPriceFunc = (state, productData) => {
 const filterSectionFunc = (state, productData) => {
     return state.filterSectionVal.length === 0 ?
         productData :
-        [...productData].filter(item => item.isInSection.some(section => state.filterSectionVal.includes(section)))
+        [...productData].filter(
+            item => item.isInSection.some(
+                section => state.filterSectionVal.includes(section)))
 }
 
 const filterCategoryFunc = (state, productData) => {
     return state.filterCategoryVal.length === 0 ?
         productData :
-        [...productData].filter(item => state.filterCategoryVal.includes(item.categoryName))
+        [...productData].filter(
+            item => state.filterCategoryVal.includes(item.categoryName))
 }
 
 const filterProductsFunc = (state, productData) => {
     return state.filterProductsVal.length === 0 ?
         productData :
-        [...productData].filter(item => state.filterProductsVal.some(specialProduct => item[specialProduct] === true))
+        [...productData].filter(
+            item => state.filterProductsVal.some(
+                specialProduct => item[specialProduct] === true))
+}
+
+const findInSearchedValue = (state, value) => {
+    return state.searchedValue.toLowerCase().includes(value.toLowerCase())
+}
+
+const filterSearchedProductFunc = (state, productData) => {
+    return state.searchedValue === "" ?
+        productData :
+        [...productData].filter(
+            item => (
+                item.isInSection.some(
+                    section => findInSearchedValue(state, section)) ||
+                item.description.split(" ").some(
+                    word => findInSearchedValue(state, word))
+            )
+        )
 }
 
 export {
@@ -66,5 +88,6 @@ export {
     filterPriceFunc,
     filterSectionFunc,
     filterCategoryFunc,
-    filterProductsFunc
+    filterProductsFunc,
+    filterSearchedProductFunc
 };
