@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, createContext } from "react";
+import React, { useState, useReducer, useContext, createContext } from "react";
 import { getOriginalPrice } from "../utils/productutilFuncs";
 import { cartReducer } from "../reducers/cartReducer";
 
@@ -6,7 +6,10 @@ const cartContext = createContext({ state: [] });
 
 const CartProvider = ({ children }) => {
 
+    const [isCouponInvalid, setIsCouponInvalid] = useState(false);
+    const [appliedCoupon, setAppliedCoupon] = useState("");
     const [stateOfCart, dispatchOfCart] = useReducer(cartReducer, []);
+    const [showCouponsPopUpContainer, setShowCouponsPopUpContainer] = useState(false);
 
     const priceDetailsReducer = (acc, curr) => {
         return {
@@ -22,7 +25,13 @@ const CartProvider = ({ children }) => {
         value={{
             stateOfCart,
             dispatchOfCart,
-            priceDetailsObj
+            priceDetailsObj,
+            appliedCoupon,
+            setAppliedCoupon,
+            isCouponInvalid,
+            setIsCouponInvalid,
+            showCouponsPopUpContainer,
+            setShowCouponsPopUpContainer
         }}>
         {children}
     </cartContext.Provider>

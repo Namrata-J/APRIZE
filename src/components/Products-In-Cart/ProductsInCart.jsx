@@ -2,6 +2,7 @@ import "./productsInCart.css";
 import { Link } from "react-router-dom";
 import { useCart, useWishlist } from "../../contexts";
 import { getOriginalPrice } from "../../utils/productutilFuncs";
+import { getTheFinalCouponAppliedAmount } from "../../utils/couponUtilFunc";
 import { MOVE_TO_WISHLIST_FROM_CART } from "../../constants/wishlistConstants";
 import {
     REMOVE_FROM_CART,
@@ -12,7 +13,12 @@ import {
 const ProductsInCart = () => {
 
     const { dipatchOfWishlist } = useWishlist();
-    const { stateOfCart: itemsInCart, dispatchOfCart, priceDetailsObj } = useCart();
+    const {
+        appliedCoupon,
+        stateOfCart: itemsInCart,
+        dispatchOfCart,
+        priceDetailsObj,
+        setShowCouponsPopUpContainer } = useCart();
 
     return (
         <div className="ap_all-addedToCart-products">
@@ -141,7 +147,25 @@ const ProductsInCart = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="ap_pricedetails-card-subContainer4 priceDetails-card-subcontainer">
+                                <div className="ap_pricedetails-card-subContainer4 priceDetails-subContainer-borderBtm priceDetails-card-subcontainer">
+                                    <button
+                                        className="et_p-simple-btn action-color btn"
+                                        onClick={() => setShowCouponsPopUpContainer(true)} >
+                                        Apply Coupon
+                                    </button>
+                                    <div className="ap_product-priceDetail">
+                                        <div className="ap_coupon-title">Final Amount</div>
+                                        <div className="ap_applied-coupon-discount">
+                                            {
+                                                getTheFinalCouponAppliedAmount(
+                                                    appliedCoupon,
+                                                    (priceDetailsObj.totalDiscountedPrice) + 10) ||
+                                                `₹${(priceDetailsObj.totalDiscountedPrice) + 10}`
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="ap_pricedetails-card-subContainer5 priceDetails-card-subcontainer">
                                     <div className="ap_addedToCart-products-saved-amount">
                                         You will save ₹{(priceDetailsObj.totalOriginalPrice - priceDetailsObj.totalDiscountedPrice) - 10} on this order
                                     </div>
