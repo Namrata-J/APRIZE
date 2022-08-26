@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { AprizeLogo } from "../";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
     useCart,
     useHeaderIcons,
@@ -19,6 +19,7 @@ import {
 
 const Header = () => {
 
+    const navigate = useNavigate();
     const { stateOfCart } = useCart();
     const { isUserLoggedIn } = useAuth();
     const { stateOfWishlist } = useWishlist();
@@ -43,7 +44,7 @@ const Header = () => {
             <header className="ap_header">
 
                 <div
-                    className="ap_header-popUp-serchBar-container"
+                    className="ap_header-popUp-searchBar-container"
                     style={{ display: popUpSearchBarDisplay }}>
                     <div className="ap_popUp-searchBar-container">
                         <div className="ap_popUp-searchBar-subcontainer1">
@@ -55,9 +56,17 @@ const Header = () => {
                                 value={popUpSearchBarInput}
                                 onChange={(e) => setPopUpSearchBarInput(e.target.value)} />
                         </div>
-                        <VscChromeClose
-                            className="ap_reset-popUp-searchBar-input popUp-searchBar-icon"
-                            onClick={() => setPopUpSearchBarInput("")} />
+                        <div>
+                            <Link
+                                to="/Productlisting"
+                                state={{popUpSearchBarInput}}>
+                                <HiOutlineSearch
+                                    className="ap_search-popUp-searchBar-icon popUp-searchBar-icon" />
+                            </Link>
+                            <VscChromeClose
+                                className="ap_reset-popUp-searchBar-input popUp-searchBar-icon"
+                                onClick={() => setPopUpSearchBarInput("")} />
+                        </div>
                     </div>
                 </div>
 
@@ -119,8 +128,17 @@ const Header = () => {
 
                     <div className="ap_header-rounded-searchBar-with-icon-container">
                         <div className="ap_rounded-swi b-rad3">
-                            <input placeholder="Search" />
-                            <HiOutlineSearch className="ap_header-searchBar-icon" />
+                            <input
+                                placeholder="Search"
+                                value={popUpSearchBarInput}
+                                onChange={(e) => setPopUpSearchBarInput(e.target.value)} />
+                            <Link
+                                to="/Productlisting"
+                                state={{popUpSearchBarInput}}>
+                                <HiOutlineSearch
+                                    className="ap_header-searchBar-icon" />
+                            </Link>
+
                         </div>
                     </div>
 

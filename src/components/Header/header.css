@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.ap_header-popUp-serchBar-container {
+.ap_header-popUp-searchBar-container {
     background-color: var(--white-color);
     box-shadow: 0px 0px 2px 0px var(--action);
     min-height: 5rem;
@@ -44,6 +44,10 @@
 
 .popUp-searchBar-icon:hover, .ap_close-hamburger-menu:hover {
     color: var(--medium-gray);
+}
+
+.ap_search-popUp-searchBar-icon {
+    margin-right: 0.5rem;
 }
 
 .ap_popUp-searchBar-subcontainer1 input {

@@ -2,7 +2,78 @@
 
 .ap_cart-page {
     background-color: var(--most-lightest-gray);
-    display: flex;
-    flex-direction: column;
     min-height: 42rem;
+    position: relative;
+}
+
+.ap_cart-page, 
+.ap_popUp-coupons-main-container div,
+.ap_popUp-coupons-main-container {
+    flex-direction: column;
+}
+
+.ap_cart-page,
+.ap_popUp-coupons-outer-container,
+.ap_popUp-coupons-main-container,
+.ap_popUp-coupons-main-container div,
+.ap_popUp-coupons-main-container label  
+ {
+    display: flex;
+}
+
+.ap_popUp-coupons-outer-container {
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.ap_popUp-coupons-main-container {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 5px 0px var(--action);
+    justify-content: space-between;
+    height: 12rem;
+    margin-top: 35vh;
+    padding: 0.5rem;
+    width: 20rem;
+}
+
+.ap_popUp-coupons-close-icon {
+    cursor: pointer;
+    position: absolute;
+}
+
+.ap_popUp-coupons-close-icon:hover {
+    color: var(--action);
+}
+
+.ap_popUp-coupons-main-container p {
+    font-family: "Gruppo";
+}
+
+.ap_popUp-coupons-main-container div {
+    align-items: flex-start;
+    color: var(--action);
+    font-size: 0.7rem;
+    margin: 1rem 0.5rem;
+}
+
+.ap_popUp-coupons-main-container div,
+.ap_popUp-coupons-main-container label {
+    gap: 0.5rem;
+}
+
+.ap_popUp-coupons-main-container label {
+    align-items: center;
+}
+
+.ap_popUp-coupons-main-container button {
+    color: var(--white-color);
+}
+
+.ap_invalid-coupon {
+    color: var(--light-red);
+    font-size: 0.9rem;
 }

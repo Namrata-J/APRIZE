@@ -7,7 +7,8 @@ import {
     CLEAR,
     FILTER_BY_SECTION,
     FILTER_BY_CATEGORY,
-    FILTER_BY_PRODUCTS
+    FILTER_BY_PRODUCTS,
+    FILTER_SEARCHED_PRODUCT
 } from "../../constants/filterStateConstants";
 
 const ProductCardListing = () => {
@@ -21,6 +22,8 @@ const ProductCardListing = () => {
     const discountedProducts = location?.state?.hasDiscount
 
     const productOnSale = location?.state?.onSale
+
+    const searchBarInput = location?.state?.popUpSearchBarInput
 
     const { stateOfProductsBeingShown, dispatchOfProductsBeingShown, filteredProductList } = useFilterData();
 
@@ -53,6 +56,11 @@ const ProductCardListing = () => {
         if (productOnSale) {
             dispatchOfProductsBeingShown({ type: CLEAR })
             dispatchOfProductsBeingShown({ type: FILTER_BY_PRODUCTS, payload: "isInSale" })
+        }
+
+        if (searchBarInput) {
+            dispatchOfProductsBeingShown({ type: CLEAR })
+            dispatchOfProductsBeingShown({ type: FILTER_SEARCHED_PRODUCT, payload: searchBarInput })
         }
     }, [])
 

@@ -8,7 +8,8 @@ import {
     filterPriceFunc,
     filterSectionFunc,
     filterCategoryFunc,
-    filterProductsFunc
+    filterProductsFunc,
+    filterSearchedProductFunc
 } from "../utils/sortAndFilterFunc";
 
 const filterDataContext = createContext(null);
@@ -24,19 +25,21 @@ const FilterDataProvider = ({ children }) => {
         filterPriceVal: 100000,
         filterSectionVal: [],
         filterCategoryVal: [],
-        filterProductsVal: []
+        filterProductsVal: [],
+        searchedValue: ""
     };
 
     const [stateOfProductsBeingShown, dispatchOfProductsBeingShown] = useReducer(filterStateReducer, initialObj);
 
-    const filteredProductList = filterProductsFunc(stateOfProductsBeingShown,
-        filterCategoryFunc(stateOfProductsBeingShown,
-            filterSectionFunc(stateOfProductsBeingShown,
-                filterPriceFunc(stateOfProductsBeingShown,
-                    sortDiscountFunc(stateOfProductsBeingShown,
-                        sortRatingFunc(stateOfProductsBeingShown,
-                            sortPriceFunc(stateOfProductsBeingShown,
-                                productsDataFetchedFromApi)))))));
+    const filteredProductList = filterSearchedProductFunc(stateOfProductsBeingShown,
+        filterProductsFunc(stateOfProductsBeingShown,
+            filterCategoryFunc(stateOfProductsBeingShown,
+                filterSectionFunc(stateOfProductsBeingShown,
+                    filterPriceFunc(stateOfProductsBeingShown,
+                        sortDiscountFunc(stateOfProductsBeingShown,
+                            sortRatingFunc(stateOfProductsBeingShown,
+                                sortPriceFunc(stateOfProductsBeingShown,
+                                    productsDataFetchedFromApi))))))));
 
     return <filterDataContext.Provider
         value={{

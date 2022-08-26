@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     gap: 3rem;
     justify-content: center;
-    height: 23rem;
+    height: 25.5rem;
     overflow-y: scroll;
     padding: 1rem 4rem;
 }
@@ -125,7 +125,7 @@
     box-shadow: 0px 0px 3px 0px var(--action);
     display: flex;
     flex-direction: column;
-    height: 15rem;
+    min-height: 15rem;
     width: 25rem;
     padding: 1rem;
 }
@@ -151,6 +151,7 @@
     justify-content: space-between;
 }
 
+.ap_pricedetails-card-subContainer5 .et_p-simple-btn,
 .ap_pricedetails-card-subContainer4 .et_p-simple-btn {
     color: var(--white-color);
 }

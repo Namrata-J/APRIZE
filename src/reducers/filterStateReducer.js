@@ -6,7 +6,8 @@ import {
     FILTER_BY_PRICE,
     FILTER_BY_SECTION,
     FILTER_BY_CATEGORY,
-    FILTER_BY_PRODUCTS
+    FILTER_BY_PRODUCTS,
+    FILTER_SEARCHED_PRODUCT
 } from "../constants/filterStateConstants";
 
 export const filterStateReducer = (state, action) => {
@@ -20,7 +21,8 @@ export const filterStateReducer = (state, action) => {
                 filterPriceVal: 100000,
                 filterSectionVal: [],
                 filterCategoryVal: [],
-                filterProductsVal: []
+                filterProductsVal: [],
+                searchedValue: ""
             }
         case SORT_BY_PRICE:
             return {
@@ -62,6 +64,11 @@ export const filterStateReducer = (state, action) => {
                 filterProductsVal: state.filterProductsVal.includes(action.payload) ?
                     state.filterProductsVal.filter(item => item !== action.payload) :
                     [...state.filterProductsVal, action.payload]
+            }
+        case FILTER_SEARCHED_PRODUCT:
+            return {
+                ...state,
+                searchedValue: action.payload
             }
         default:
             return state
