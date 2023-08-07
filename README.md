@@ -22,6 +22,13 @@
 
 <hr>
 
+#### Features
+- Authentication with form validation
+- Product listing, Filter & Sort Functionality
+- Search Functionality & Coupon functionality
+- Wishlist & Cart management
+- Toasts, good SEO
+
 ## Table Of Contents
 1. [Pages](#Pages)
 2. [Deployment Status](#status)
